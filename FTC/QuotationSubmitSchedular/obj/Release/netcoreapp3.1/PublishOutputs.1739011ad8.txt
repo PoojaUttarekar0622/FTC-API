@@ -1,0 +1,6 @@
+F:\Pooja\ProjectData\FTC\PublishFTCAPI\QuotationSubmitSchedular.exe
+F:\Pooja\ProjectData\FTC\PublishFTCAPI\QuotationSubmitSchedular.dll
+F:\Pooja\ProjectData\FTC\PublishFTCAPI\QuotationSubmitSchedular.deps.json
+F:\Pooja\ProjectData\FTC\PublishFTCAPI\QuotationSubmitSchedular.runtimeconfig.json
+F:\Pooja\ProjectData\FTC\PublishFTCAPI\QuotationSubmitSchedular.pdb
+F:\Pooja\ProjectData\FTC\PublishFTCAPI\Newtonsoft.Json.dll

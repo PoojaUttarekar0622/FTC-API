@@ -1,0 +1,6 @@
+C:\Project\DevlopmentEnviornment\PublishFTC\SNQErrorVerified.exe
+C:\Project\DevlopmentEnviornment\PublishFTC\SNQErrorVerified.dll
+C:\Project\DevlopmentEnviornment\PublishFTC\SNQErrorVerified.deps.json
+C:\Project\DevlopmentEnviornment\PublishFTC\SNQErrorVerified.runtimeconfig.json
+C:\Project\DevlopmentEnviornment\PublishFTC\SNQErrorVerified.pdb
+C:\Project\DevlopmentEnviornment\PublishFTC\Newtonsoft.Json.dll

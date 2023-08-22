@@ -1,0 +1,6 @@
+C:\Project\DevlopmentEnviornment\PublishFTC\QuotationSubmitSchedular.exe
+C:\Project\DevlopmentEnviornment\PublishFTC\QuotationSubmitSchedular.dll
+C:\Project\DevlopmentEnviornment\PublishFTC\QuotationSubmitSchedular.deps.json
+C:\Project\DevlopmentEnviornment\PublishFTC\QuotationSubmitSchedular.runtimeconfig.json
+C:\Project\DevlopmentEnviornment\PublishFTC\QuotationSubmitSchedular.pdb
+C:\Project\DevlopmentEnviornment\PublishFTC\Newtonsoft.Json.dll

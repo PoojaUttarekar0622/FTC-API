@@ -1,0 +1,6 @@
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\RFQVerifiedSchedular.exe
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\RFQVerifiedSchedular.dll
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\RFQVerifiedSchedular.deps.json
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\RFQVerifiedSchedular.runtimeconfig.json
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\RFQVerifiedSchedular.pdb
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\Newtonsoft.Json.dll

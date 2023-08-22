@@ -1,0 +1,109 @@
+D:\FTC NEW\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.deps.json
+D:\FTC NEW\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.runtimeconfig.json
+D:\FTC NEW\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.runtimeconfig.dev.json
+D:\FTC NEW\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.dll
+D:\FTC NEW\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.pdb
+D:\FTC NEW\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.AssemblyInfoInputs.cache
+D:\FTC NEW\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.AssemblyInfo.cs
+D:\FTC NEW\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.csproj.CoreCompileInputs.cache
+D:\FTC NEW\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.dll
+D:\FTC NEW\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.pdb
+D:\FTC NEW\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.genruntimeconfig.cache
+D:\FTC NEW\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.csprojAssemblyReference.cache
+D:\FTC NEW\git\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.deps.json
+D:\FTC NEW\git\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.runtimeconfig.json
+D:\FTC NEW\git\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.runtimeconfig.dev.json
+D:\FTC NEW\git\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.dll
+D:\FTC NEW\git\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.pdb
+D:\FTC NEW\git\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.AssemblyInfoInputs.cache
+D:\FTC NEW\git\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.AssemblyInfo.cs
+D:\FTC NEW\git\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.csproj.CoreCompileInputs.cache
+D:\FTC NEW\git\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.dll
+D:\FTC NEW\git\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.pdb
+D:\FTC NEW\git\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.genruntimeconfig.cache
+F:\Pooja\FTC\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.deps.json
+F:\Pooja\FTC\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.runtimeconfig.json
+F:\Pooja\FTC\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.runtimeconfig.dev.json
+F:\Pooja\FTC\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.dll
+F:\Pooja\FTC\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.pdb
+F:\Pooja\FTC\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\EPPlus.dll
+F:\Pooja\FTC\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\EPPlus.xml
+F:\Pooja\FTC\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.csproj.AssemblyReference.cache
+F:\Pooja\FTC\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.AssemblyInfoInputs.cache
+F:\Pooja\FTC\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.AssemblyInfo.cs
+F:\Pooja\FTC\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.csproj.CoreCompileInputs.cache
+F:\Pooja\FTC\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.csproj.CopyComplete
+F:\Pooja\FTC\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.dll
+F:\Pooja\FTC\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.pdb
+F:\Pooja\FTC\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.genruntimeconfig.cache
+F:\Pooja\FTC\Git Project\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.AssemblyInfoInputs.cache
+F:\Pooja\FTC\Git Project\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.AssemblyInfo.cs
+F:\Pooja\FTC\Git Project\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.csproj.CoreCompileInputs.cache
+F:\Pooja\FTC\Git Project\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.csproj.AssemblyReference.cache
+F:\Pooja\FTC\Git Project\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.deps.json
+F:\Pooja\FTC\Git Project\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.runtimeconfig.json
+F:\Pooja\FTC\Git Project\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.runtimeconfig.dev.json
+F:\Pooja\FTC\Git Project\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.pdb
+F:\Pooja\FTC\Git Project\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\EPPlus.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.csproj.CopyComplete
+F:\Pooja\FTC\Git Project\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.pdb
+F:\Pooja\FTC\Git Project\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.genruntimeconfig.cache
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.deps.json
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.runtimeconfig.json
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.runtimeconfig.dev.json
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.pdb
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\EPPlus.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.AssemblyInfoInputs.cache
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.AssemblyInfo.cs
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.csproj.CoreCompileInputs.cache
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.csproj.CopyComplete
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.pdb
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.genruntimeconfig.cache
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.csproj.AssemblyReference.cache
+F:\Pooja\GitProject\FTC\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.deps.json
+F:\Pooja\GitProject\FTC\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\EPPlus.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.csproj.AssemblyReference.cache
+F:\Pooja\GitProject\FTC\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.AssemblyInfoInputs.cache
+F:\Pooja\GitProject\FTC\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.AssemblyInfo.cs
+F:\Pooja\GitProject\FTC\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.csproj.CoreCompileInputs.cache
+F:\Pooja\GitProject\FTC\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.csproj.CopyComplete
+F:\Pooja\GitProject\FTC\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.pdb
+F:\Pooja\GitProject\FTC\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.genruntimeconfig.cache
+F:\Pooja\GitProject\FTC\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.runtimeconfig.json
+F:\Pooja\GitProject\FTC\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.runtimeconfig.dev.json
+F:\Pooja\GitProject\FTC\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.pdb
+C:\Project\DevlopmentCode\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.deps.json
+C:\Project\DevlopmentCode\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.runtimeconfig.json
+C:\Project\DevlopmentCode\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.runtimeconfig.dev.json
+C:\Project\DevlopmentCode\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.pdb
+C:\Project\DevlopmentCode\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\EPPlus.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.csprojAssemblyReference.cache
+C:\Project\DevlopmentCode\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.AssemblyInfoInputs.cache
+C:\Project\DevlopmentCode\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.AssemblyInfo.cs
+C:\Project\DevlopmentCode\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.csproj.CoreCompileInputs.cache
+C:\Project\DevlopmentCode\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.csproj.CopyComplete
+C:\Project\DevlopmentCode\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.pdb
+C:\Project\DevlopmentCode\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.genruntimeconfig.cache
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.deps.json
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.runtimeconfig.json
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.runtimeconfig.dev.json
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\Helper.pdb
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\Helper\bin\Debug\netcoreapp3.1\EPPlus.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.csproj.AssemblyReference.cache
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.GeneratedMSBuildEditorConfig.editorconfig
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.AssemblyInfoInputs.cache
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.AssemblyInfo.cs
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.csproj.CoreCompileInputs.cache
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.csproj.CopyComplete
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.pdb
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\Helper\obj\Debug\netcoreapp3.1\Helper.genruntimeconfig.cache

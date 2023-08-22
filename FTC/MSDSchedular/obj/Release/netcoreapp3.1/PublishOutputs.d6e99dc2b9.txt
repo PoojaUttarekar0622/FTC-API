@@ -1,0 +1,6 @@
+C:\Project\DevlopmentCode\PublishFTC\MSDSchedular.exe
+C:\Project\DevlopmentCode\PublishFTC\MSDSchedular.dll
+C:\Project\DevlopmentCode\PublishFTC\MSDSchedular.deps.json
+C:\Project\DevlopmentCode\PublishFTC\MSDSchedular.runtimeconfig.json
+C:\Project\DevlopmentCode\PublishFTC\MSDSchedular.pdb
+C:\Project\DevlopmentCode\PublishFTC\Newtonsoft.Json.dll

@@ -1,0 +1,6 @@
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\SNQSchedular.exe
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\SNQSchedular.dll
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\SNQSchedular.deps.json
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\SNQSchedular.runtimeconfig.json
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\SNQSchedular.pdb
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\Newtonsoft.Json.dll

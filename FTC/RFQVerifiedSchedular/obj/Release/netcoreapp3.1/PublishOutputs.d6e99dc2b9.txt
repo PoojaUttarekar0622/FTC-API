@@ -1,0 +1,6 @@
+C:\Project\DevlopmentCode\PublishFTC\RFQVerifiedSchedular.exe
+C:\Project\DevlopmentCode\PublishFTC\RFQVerifiedSchedular.dll
+C:\Project\DevlopmentCode\PublishFTC\RFQVerifiedSchedular.deps.json
+C:\Project\DevlopmentCode\PublishFTC\RFQVerifiedSchedular.runtimeconfig.json
+C:\Project\DevlopmentCode\PublishFTC\RFQVerifiedSchedular.pdb
+C:\Project\DevlopmentCode\PublishFTC\Newtonsoft.Json.dll

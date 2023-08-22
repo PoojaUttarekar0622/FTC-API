@@ -1,0 +1,6 @@
+F:\Pooja\FTC\PublishFTCProd\SNQSchedular.exe
+F:\Pooja\FTC\PublishFTCProd\SNQSchedular.dll
+F:\Pooja\FTC\PublishFTCProd\SNQSchedular.deps.json
+F:\Pooja\FTC\PublishFTCProd\SNQSchedular.runtimeconfig.json
+F:\Pooja\FTC\PublishFTCProd\SNQSchedular.pdb
+F:\Pooja\FTC\PublishFTCProd\Newtonsoft.Json.dll

@@ -1,0 +1,16 @@
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQErrorVerified\bin\Release\netcoreapp3.1\SNQErrorVerified.exe
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQErrorVerified\bin\Release\netcoreapp3.1\SNQErrorVerified.deps.json
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQErrorVerified\bin\Release\netcoreapp3.1\SNQErrorVerified.runtimeconfig.json
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQErrorVerified\bin\Release\netcoreapp3.1\SNQErrorVerified.runtimeconfig.dev.json
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQErrorVerified\bin\Release\netcoreapp3.1\SNQErrorVerified.dll
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQErrorVerified\bin\Release\netcoreapp3.1\SNQErrorVerified.pdb
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQErrorVerified\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQErrorVerified\obj\Release\netcoreapp3.1\SNQErrorVerified.csproj.AssemblyReference.cache
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQErrorVerified\obj\Release\netcoreapp3.1\SNQErrorVerified.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQErrorVerified\obj\Release\netcoreapp3.1\SNQErrorVerified.AssemblyInfoInputs.cache
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQErrorVerified\obj\Release\netcoreapp3.1\SNQErrorVerified.AssemblyInfo.cs
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQErrorVerified\obj\Release\netcoreapp3.1\SNQErrorVerified.csproj.CoreCompileInputs.cache
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQErrorVerified\obj\Release\netcoreapp3.1\SNQErrorVerified.csproj.CopyComplete
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQErrorVerified\obj\Release\netcoreapp3.1\SNQErrorVerified.dll
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQErrorVerified\obj\Release\netcoreapp3.1\SNQErrorVerified.pdb
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQErrorVerified\obj\Release\netcoreapp3.1\SNQErrorVerified.genruntimeconfig.cache

@@ -1,0 +1,108 @@
+F:\Pooja\FTC\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.exe
+F:\Pooja\FTC\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.deps.json
+F:\Pooja\FTC\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.runtimeconfig.json
+F:\Pooja\FTC\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.runtimeconfig.dev.json
+F:\Pooja\FTC\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.dll
+F:\Pooja\FTC\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.pdb
+F:\Pooja\FTC\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
+F:\Pooja\FTC\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.csproj.AssemblyReference.cache
+F:\Pooja\FTC\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.AssemblyInfoInputs.cache
+F:\Pooja\FTC\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.AssemblyInfo.cs
+F:\Pooja\FTC\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.csproj.CoreCompileInputs.cache
+F:\Pooja\FTC\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.csproj.CopyComplete
+F:\Pooja\FTC\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.dll
+F:\Pooja\FTC\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.pdb
+F:\Pooja\FTC\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.genruntimeconfig.cache
+F:\Pooja\FTC\Git Project\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.exe
+F:\Pooja\FTC\Git Project\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.deps.json
+F:\Pooja\FTC\Git Project\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.runtimeconfig.json
+F:\Pooja\FTC\Git Project\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.runtimeconfig.dev.json
+F:\Pooja\FTC\Git Project\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.pdb
+F:\Pooja\FTC\Git Project\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.csproj.AssemblyReference.cache
+F:\Pooja\FTC\Git Project\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.AssemblyInfoInputs.cache
+F:\Pooja\FTC\Git Project\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.AssemblyInfo.cs
+F:\Pooja\FTC\Git Project\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.csproj.CoreCompileInputs.cache
+F:\Pooja\FTC\Git Project\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.csproj.CopyComplete
+F:\Pooja\FTC\Git Project\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.pdb
+F:\Pooja\FTC\Git Project\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.genruntimeconfig.cache
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.exe
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.deps.json
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.runtimeconfig.json
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.runtimeconfig.dev.json
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.pdb
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.AssemblyInfoInputs.cache
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.AssemblyInfo.cs
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.csproj.CoreCompileInputs.cache
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.csproj.CopyComplete
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.pdb
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.genruntimeconfig.cache
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.csproj.AssemblyReference.cache
+F:\Pooja\GitProject\FTC\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.exe
+F:\Pooja\GitProject\FTC\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.deps.json
+F:\Pooja\GitProject\FTC\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.runtimeconfig.json
+F:\Pooja\GitProject\FTC\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.runtimeconfig.dev.json
+F:\Pooja\GitProject\FTC\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.pdb
+F:\Pooja\GitProject\FTC\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.AssemblyInfoInputs.cache
+F:\Pooja\GitProject\FTC\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.AssemblyInfo.cs
+F:\Pooja\GitProject\FTC\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.csproj.CoreCompileInputs.cache
+F:\Pooja\GitProject\FTC\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.csproj.CopyComplete
+F:\Pooja\GitProject\FTC\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.pdb
+F:\Pooja\GitProject\FTC\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.genruntimeconfig.cache
+F:\Pooja\GitProject\FTC\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.csproj.AssemblyReference.cache
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.exe
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.deps.json
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.runtimeconfig.json
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.runtimeconfig.dev.json
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.pdb
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.csproj.AssemblyReference.cache
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.GeneratedMSBuildEditorConfig.editorconfig
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.AssemblyInfoInputs.cache
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.AssemblyInfo.cs
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.csproj.CoreCompileInputs.cache
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.csproj.CopyComplete
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.pdb
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.genruntimeconfig.cache
+C:\Project\DevlopmentCode\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.exe
+C:\Project\DevlopmentCode\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.deps.json
+C:\Project\DevlopmentCode\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.runtimeconfig.json
+C:\Project\DevlopmentCode\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.runtimeconfig.dev.json
+C:\Project\DevlopmentCode\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.pdb
+C:\Project\DevlopmentCode\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.csproj.AssemblyReference.cache
+C:\Project\DevlopmentCode\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\DevlopmentCode\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.AssemblyInfoInputs.cache
+C:\Project\DevlopmentCode\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.AssemblyInfo.cs
+C:\Project\DevlopmentCode\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.csproj.CoreCompileInputs.cache
+C:\Project\DevlopmentCode\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.csproj.CopyComplete
+C:\Project\DevlopmentCode\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.pdb
+C:\Project\DevlopmentCode\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.genruntimeconfig.cache
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.exe
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.deps.json
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.runtimeconfig.json
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.runtimeconfig.dev.json
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.dll
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\SNQSchedular.pdb
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQSchedular\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.csproj.AssemblyReference.cache
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.AssemblyInfoInputs.cache
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.AssemblyInfo.cs
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.csproj.CoreCompileInputs.cache
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.csproj.CopyComplete
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.dll
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.pdb
+C:\Project\DevlopmentEnviornment\ftc-api\FTC\SNQSchedular\obj\Release\netcoreapp3.1\SNQSchedular.genruntimeconfig.cache

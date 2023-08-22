@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "VfpvdONQBqAhjaCDNwZYESoNR2kzhRg9+SWlaZdE4DcN5HouKWqtXKq+DRoEsWIV1OQ8HvnY24wDbdHjh6QGWg==",
+  "success": true,
+  "projectFilePath": "C:\\Project\\DevlopmentEnviornment\\ftc-api\\FTC\\SNQErrorVerified\\SNQErrorVerified.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\portal.FUJIJAPAN\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
+    "C:\\Users\\portal.FUJIJAPAN\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.30\\microsoft.netcore.app.host.win-x64.3.1.30.nupkg.sha512"
+  ],
+  "logs": []
+}

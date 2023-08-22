@@ -1,0 +1,6 @@
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\MSDSchedular.exe
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\MSDSchedular.dll
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\MSDSchedular.deps.json
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\MSDSchedular.runtimeconfig.json
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\MSDSchedular.pdb
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\Newtonsoft.Json.dll

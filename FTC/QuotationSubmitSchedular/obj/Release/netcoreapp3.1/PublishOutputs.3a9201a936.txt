@@ -1,0 +1,6 @@
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\QuotationSubmitSchedular.exe
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\QuotationSubmitSchedular.dll
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\QuotationSubmitSchedular.deps.json
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\QuotationSubmitSchedular.runtimeconfig.json
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\QuotationSubmitSchedular.pdb
+D:\Flologic\Application\FTC\DevlopmentCode\PublishFTC\Newtonsoft.Json.dll

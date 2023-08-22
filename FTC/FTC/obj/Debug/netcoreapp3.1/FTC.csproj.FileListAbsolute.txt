@@ -1,0 +1,571 @@
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\appsettings.json
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.exe
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.deps.json
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.runtimeconfig.json
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.runtimeconfig.dev.json
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.pdb
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Helper.dll
+D:\FTC NEW\FTC\FTC\bin\Debug\netcoreapp3.1\Helper.pdb
+D:\FTC NEW\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csprojAssemblyReference.cache
+D:\FTC NEW\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.AssemblyInfoInputs.cache
+D:\FTC NEW\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.AssemblyInfo.cs
+D:\FTC NEW\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csproj.CoreCompileInputs.cache
+D:\FTC NEW\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.MvcApplicationPartsAssemblyInfo.cache
+D:\FTC NEW\FTC\FTC\obj\Debug\netcoreapp3.1\staticwebassets\FTC.StaticWebAssets.Manifest.cache
+D:\FTC NEW\FTC\FTC\obj\Debug\netcoreapp3.1\staticwebassets\FTC.StaticWebAssets.xml
+D:\FTC NEW\FTC\FTC\obj\Debug\netcoreapp3.1\scopedcss\bundle\FTC.styles.css
+D:\FTC NEW\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.RazorTargetAssemblyInfo.cache
+D:\FTC NEW\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csproj.CopyComplete
+D:\FTC NEW\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.dll
+D:\FTC NEW\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.pdb
+D:\FTC NEW\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.genruntimeconfig.cache
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\log4net.config
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\appsettings.json
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.exe
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.deps.json
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.runtimeconfig.json
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.runtimeconfig.dev.json
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.pdb
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\DuoVia.FuzzyStrings.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\log4net.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Cryptography.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Helper.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Helper.pdb
+D:\FTC NEW\git\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csprojAssemblyReference.cache
+D:\FTC NEW\git\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.AssemblyInfoInputs.cache
+D:\FTC NEW\git\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.AssemblyInfo.cs
+D:\FTC NEW\git\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csproj.CoreCompileInputs.cache
+D:\FTC NEW\git\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.MvcApplicationPartsAssemblyInfo.cache
+D:\FTC NEW\git\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\staticwebassets\FTC.StaticWebAssets.Manifest.cache
+D:\FTC NEW\git\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\staticwebassets\FTC.StaticWebAssets.xml
+D:\FTC NEW\git\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\scopedcss\bundle\FTC.styles.css
+D:\FTC NEW\git\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.RazorTargetAssemblyInfo.cache
+D:\FTC NEW\git\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csproj.CopyComplete
+D:\FTC NEW\git\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.dll
+D:\FTC NEW\git\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.pdb
+D:\FTC NEW\git\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.genruntimeconfig.cache
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\appsettings.Development.json
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\log4net.config
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\appsettings.json
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.exe
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.deps.json
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.runtimeconfig.json
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.runtimeconfig.dev.json
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.pdb
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\DuoVia.FuzzyStrings.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\log4net.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Helper.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\EPPlus.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Helper.pdb
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\EPPlus.xml
+F:\Pooja\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csproj.AssemblyReference.cache
+F:\Pooja\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.AssemblyInfoInputs.cache
+F:\Pooja\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.AssemblyInfo.cs
+F:\Pooja\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csproj.CoreCompileInputs.cache
+F:\Pooja\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.MvcApplicationPartsAssemblyInfo.cache
+F:\Pooja\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\staticwebassets\FTC.StaticWebAssets.Manifest.cache
+F:\Pooja\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\staticwebassets\FTC.StaticWebAssets.xml
+F:\Pooja\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\scopedcss\bundle\FTC.styles.css
+F:\Pooja\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.RazorTargetAssemblyInfo.cache
+F:\Pooja\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csproj.CopyComplete
+F:\Pooja\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.pdb
+F:\Pooja\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.genruntimeconfig.cache
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Owin.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Owin.Hosting.dll
+F:\Pooja\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Owin.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csproj.AssemblyReference.cache
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.AssemblyInfoInputs.cache
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.AssemblyInfo.cs
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csproj.CoreCompileInputs.cache
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.MvcApplicationPartsAssemblyInfo.cache
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\log4net.config
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\appsettings.Development.json
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\appsettings.json
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Controllers\Properties\launchSettings.json
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.exe
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.deps.json
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.runtimeconfig.json
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.runtimeconfig.dev.json
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.pdb
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\DuoVia.FuzzyStrings.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\log4net.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Owin.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Owin.Hosting.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Owin.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Helper.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\EPPlus.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Helper.pdb
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\EPPlus.xml
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\staticwebassets\FTC.StaticWebAssets.Manifest.cache
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\staticwebassets\FTC.StaticWebAssets.xml
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\scopedcss\bundle\FTC.styles.css
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.RazorTargetAssemblyInfo.cache
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csproj.CopyComplete
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.dll
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.pdb
+F:\Pooja\FTC\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.genruntimeconfig.cache
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\appsettings.Development.json
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\appsettings.json
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Controllers\Properties\launchSettings.json
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\log4net.config
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.exe
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.deps.json
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.runtimeconfig.json
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.runtimeconfig.dev.json
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.pdb
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\DuoVia.FuzzyStrings.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\log4net.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Owin.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Owin.Hosting.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Owin.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Helper.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\EPPlus.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Helper.pdb
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\EPPlus.xml
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csproj.AssemblyReference.cache
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.AssemblyInfoInputs.cache
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.AssemblyInfo.cs
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csproj.CoreCompileInputs.cache
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.MvcApplicationPartsAssemblyInfo.cache
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\staticwebassets\FTC.StaticWebAssets.Manifest.cache
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\staticwebassets\FTC.StaticWebAssets.xml
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\scopedcss\bundle\FTC.styles.css
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.RazorTargetAssemblyInfo.cache
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csproj.CopyComplete
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.dll
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.pdb
+F:\Pooja\Project\FTC_Project\Git Project\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.genruntimeconfig.cache
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.pdb
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\appsettings.Development.json
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Controllers\Properties\launchSettings.json
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\log4net.config
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\appsettings.json
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.exe
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.deps.json
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.runtimeconfig.json
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.runtimeconfig.dev.json
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.pdb
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\DuoVia.FuzzyStrings.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\log4net.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Owin.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Owin.Hosting.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Owin.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Helper.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\EPPlus.dll
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Helper.pdb
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\EPPlus.xml
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csproj.AssemblyReference.cache
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.AssemblyInfoInputs.cache
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.AssemblyInfo.cs
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csproj.CoreCompileInputs.cache
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.MvcApplicationPartsAssemblyInfo.cache
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\staticwebassets\FTC.StaticWebAssets.Manifest.cache
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\staticwebassets\FTC.StaticWebAssets.xml
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\scopedcss\bundle\FTC.styles.css
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.RazorTargetAssemblyInfo.cache
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csproj.CopyComplete
+F:\Pooja\GitProject\FTC\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.genruntimeconfig.cache
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\log4net.config
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Controllers\Properties\launchSettings.json
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.exe
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.deps.json
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.runtimeconfig.json
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.runtimeconfig.dev.json
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.pdb
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\DuoVia.FuzzyStrings.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\log4net.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Owin.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Owin.Hosting.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Owin.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Helper.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\EPPlus.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Helper.pdb
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\EPPlus.xml
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csprojAssemblyReference.cache
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.AssemblyInfoInputs.cache
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.AssemblyInfo.cs
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csproj.CoreCompileInputs.cache
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.MvcApplicationPartsAssemblyInfo.cache
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\staticwebassets\FTC.StaticWebAssets.Manifest.cache
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\staticwebassets\FTC.StaticWebAssets.xml
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\scopedcss\bundle\FTC.styles.css
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.RazorTargetAssemblyInfo.cache
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csproj.CopyComplete
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.dll
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.pdb
+C:\Project\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.genruntimeconfig.cache
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Controllers\Properties\launchSettings.json
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\log4net.config
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.exe
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.deps.json
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.runtimeconfig.json
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.runtimeconfig.dev.json
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\FTC.pdb
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\DuoVia.FuzzyStrings.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\log4net.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Owin.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Microsoft.Owin.Hosting.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Owin.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Helper.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\EPPlus.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\Helper.pdb
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\bin\Debug\netcoreapp3.1\EPPlus.xml
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csproj.AssemblyReference.cache
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.GeneratedMSBuildEditorConfig.editorconfig
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.AssemblyInfoInputs.cache
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.AssemblyInfo.cs
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csproj.CoreCompileInputs.cache
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.MvcApplicationPartsAssemblyInfo.cache
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\staticwebassets\FTC.StaticWebAssets.Manifest.cache
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\staticwebassets\FTC.StaticWebAssets.xml
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\scopedcss\bundle\FTC.styles.css
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.RazorTargetAssemblyInfo.cache
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.csproj.CopyComplete
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.dll
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.pdb
+D:\Flologic\Application\FTC\DevlopmentCode\ftc-api\FTC\FTC\obj\Debug\netcoreapp3.1\FTC.genruntimeconfig.cache

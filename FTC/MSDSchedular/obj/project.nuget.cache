@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "jONKtPG1eXorfvra8gk2N1AMcQT3yVbEy1GGVi8Ngv2Eg42RyIeKnTgp30jqTQwnBWd0ZWJ5A789k8IVu41nsw==",
+  "success": true,
+  "projectFilePath": "C:\\Project\\DevlopmentEnviornment\\ftc-api\\FTC\\MSDSchedular\\MSDSchedular.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\portal.FUJIJAPAN\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\portal.FUJIJAPAN\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.30\\microsoft.netcore.app.host.win-x64.3.1.30.nupkg.sha512"
+  ],
+  "logs": []
+}

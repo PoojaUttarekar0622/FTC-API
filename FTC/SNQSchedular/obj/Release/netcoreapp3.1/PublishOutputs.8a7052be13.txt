@@ -1,0 +1,6 @@
+C:\Project\DevlopmentEnviornment\PublishFTC\SNQSchedular.exe
+C:\Project\DevlopmentEnviornment\PublishFTC\SNQSchedular.dll
+C:\Project\DevlopmentEnviornment\PublishFTC\SNQSchedular.deps.json
+C:\Project\DevlopmentEnviornment\PublishFTC\SNQSchedular.runtimeconfig.json
+C:\Project\DevlopmentEnviornment\PublishFTC\SNQSchedular.pdb
+C:\Project\DevlopmentEnviornment\PublishFTC\Newtonsoft.Json.dll
