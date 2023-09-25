@@ -35,14 +35,12 @@ namespace Helper.Report
             #region
             List<SNQReportSummary> lstSNQReportSummary = new List<SNQReportSummary>();
             #endregion
-
             #region
             DateTime toDate;
             DateTime fromDate;
             string Todate = "";
             bool isExcelCreate = false;
             #endregion
-
             #region
             string time =  this._Configuration.GetSection("ReportSettings")["Time"];
             #endregion
@@ -66,7 +64,7 @@ namespace Helper.Report
             #endregion
             #region
             var Tasklist = (from hdr in _datacontext.TSNQ_ENQUIRY_HDRTable
-                            where hdr.STATUS != 8 && hdr.CREATED_DATE >= fromDate && hdr.CREATED_DATE <= toDate
+                            where hdr.STATUS != 8 && hdr.CREATED_DATE >= fromDate && hdr.CREATED_DATE <= toDate && hdr.IS_ACTIVE ==1
                             select hdr).OrderBy(x => x.CREATED_DATE).ToList();
             foreach (var item in Tasklist)
             {
@@ -197,12 +195,6 @@ namespace Helper.Report
                             DateTime verifydt = Convert.ToDateTime(item.quotationCreatedat);
                             sheet.Cells[i, j++].Value = item.quotationCreatedat = verifydt.ToString("dd-MMM-yyyy hh:mm:ss tt");
                         }
-
-                        //  sheet.Cells[i, j++].Value = (item.emailReceivedat == null || item.emailReceivedat == "") ? "" : (item.emailReceivedat);
-                        //  sheet.Cells[i, j++].Value = (item.inErrorat == null || item.inErrorat == "") ? "" : (item.inErrorat);
-                        //   sheet.Cells[i, j++].Value = (item.quotationCreatedat == null || item.quotationCreatedat == "") ? "" :(item.quotationCreatedat.);
-                       
-                        
                         sheet.Cells[i, j++].Value = (item.VerifiedBy == null || item.VerifiedBy == "") ? "" : (item.VerifiedBy);
                         sheet.Cells[i, j++].Value = (item.CorrectedBy == null || item.CorrectedBy == "") ? "" : (item.CorrectedBy);
                         sheet.Cells[i, j++].Value = item.sourceType;
@@ -375,7 +367,6 @@ namespace Helper.Report
     #region
     public class DailyReport
     {
-       
         public string fromDate{ get; set; }
         public string toDate { get; set; }
         public bool isFilter { get; set; }

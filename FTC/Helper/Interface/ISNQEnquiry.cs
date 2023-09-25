@@ -24,8 +24,9 @@ namespace Helper.Interface
         EnqOwnership Getuserownershipdtl(int PKHDRID);
         MessageSNQ UpdateSaveAsEnquiry(Enquiryheader objEnquiry);
         public List<PortMapping> GetPortMappingData();
-
         public MessageSNQ VerifyRFQ(string errorRFQ);
+        public List<Enquiryheaderdata> GetTaskListForShipName(shipSearchdata objsearchdata);
+        public MessageSNQ UpdateRFQByShipName(List<Enquiryheaderdata> lstenquhdrdata);
         #endregion
     }
 }

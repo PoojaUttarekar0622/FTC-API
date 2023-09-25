@@ -101,22 +101,22 @@ namespace Helper.Model
                 DateTime toDt = Convert.ToDateTime(todate);
                 #region calculate pending rfq's count
                 objStatus.SNQVerification = (from hdr in _datacontext.TSNQ_ENQUIRY_HDRTable
-                                             where hdr.STATUS == 1 && hdr.CREATED_DATE.Date >= fromDt && hdr.CREATED_DATE.Date <= toDt
+                                             where hdr.STATUS == 1 && hdr.IS_ACTIVE == 1 && hdr.CREATED_DATE.Date >= fromDt && hdr.CREATED_DATE.Date <= toDt
                                              select hdr).OrderByDescending(x => x.CREATED_DATE).Count();
                 #endregion
                 #region calculate completed rfq's count
                 objStatus.SNQCompleted = (from hdr in _datacontext.TSNQ_ENQUIRY_HDRTable
-                                          where hdr.STATUS == 4 && hdr.CREATED_DATE.Date >= fromDt && hdr.CREATED_DATE.Date <= toDt
+                                          where hdr.STATUS == 4 && hdr.IS_ACTIVE == 1 && hdr.CREATED_DATE.Date >= fromDt && hdr.CREATED_DATE.Date <= toDt
                                           select hdr).OrderByDescending(x => x.CREATED_DATE).Count();
                 #endregion
                 #region calculate error rfq's count
                 objStatus.SNQError = (from hdr in _datacontext.TSNQ_ENQUIRY_HDRTable
-                                      where hdr.STATUS == 5 && hdr.CREATED_DATE.Date >= fromDt && hdr.CREATED_DATE.Date <= toDt
+                                      where hdr.STATUS == 5 && hdr.IS_ACTIVE==1 && hdr.CREATED_DATE.Date >= fromDt && hdr.CREATED_DATE.Date <= toDt
                                       select hdr).OrderByDescending(x => x.CREATED_DATE).Count();
                 #endregion
                 #region calculate inprocess or updated rfq's count
                 objStatus.SNQProcessing = (from hdr in _datacontext.TSNQ_ENQUIRY_HDRTable
-                                           where (hdr.STATUS == 2 || hdr.STATUS == 6) && hdr.CREATED_DATE.Date >= fromDt && hdr.CREATED_DATE.Date <= toDt
+                                           where (hdr.STATUS == 2 || hdr.STATUS == 6) && hdr.IS_ACTIVE == 1 && hdr.CREATED_DATE.Date >= fromDt && hdr.CREATED_DATE.Date <= toDt
                                            select hdr).OrderByDescending(x => x.CREATED_DATE).Count();
                 #endregion
                 objStatus.SNQInProcess = objStatus.SNQVerification + objStatus.SNQProcessing;
@@ -130,27 +130,27 @@ namespace Helper.Model
             {
                 #region calculate completed rfq's count
                 objStatus.SNQCompleted = (from hdr in _datacontext.TSNQ_ENQUIRY_HDRTable
-                                          where hdr.STATUS == 4
+                                          where hdr.STATUS == 4 && hdr.IS_ACTIVE == 1
                                           select hdr).OrderByDescending(x => x.CREATED_DATE).Count();
                 #endregion
                 #region calculate pending rfq's count
                 objStatus.SNQVerification = (from hdr in _datacontext.TSNQ_ENQUIRY_HDRTable
-                                             where hdr.STATUS == 1
+                                             where hdr.STATUS == 1 && hdr.IS_ACTIVE == 1
                                              select hdr).OrderByDescending(x => x.CREATED_DATE).Count();
                 #endregion
                 #region calculate error rfq's count
                 objStatus.SNQError = (from hdr in _datacontext.TSNQ_ENQUIRY_HDRTable
-                                      where hdr.STATUS == 5
+                                      where hdr.STATUS == 5 && hdr.IS_ACTIVE == 1
                                       select hdr).OrderByDescending(x => x.CREATED_DATE).Count();
                 #endregion
                 #region calculate manual rfq's count
                 objStatus.SNQManual = (from hdr in _datacontext.TSNQ_ENQUIRY_HDRTable
-                                       where hdr.STATUS == 7
+                                       where hdr.STATUS == 7 && hdr.IS_ACTIVE == 1
                                        select hdr).OrderByDescending(x => x.CREATED_DATE).Count();
                 #endregion
                 #region calculate inprocess or updated rfq's count
                 objStatus.SNQProcessing = (from hdr in _datacontext.TSNQ_ENQUIRY_HDRTable
-                                           where (hdr.STATUS == 2 || hdr.STATUS == 6)
+                                           where (hdr.STATUS == 2 || hdr.STATUS == 6) && hdr.IS_ACTIVE == 1
                                            select hdr).OrderByDescending(x => x.CREATED_DATE).Count();
                 #endregion
                 objStatus.SNQInProcess = objStatus.SNQVerification + objStatus.SNQProcessing;

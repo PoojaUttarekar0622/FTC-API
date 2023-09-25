@@ -49,7 +49,7 @@ namespace Helper.Model
             public string saveAsDraft { get; set; }
 
             public string sourceType { get; set; }
-
+            public string accountNo { get; set; }
             public int IsUpdatedMakerWithML { get; set; }
             public int IsUpdatedEquipmentWithML { get; set; }
             public string rfqUrl { get; set; }
@@ -144,10 +144,10 @@ namespace Helper.Model
             public string loginId { get; set; }
             public string userName { get; set; }
             public string emailReceiveddate { get; set; }
-
             public string saveAsDraft { get; set; }
-
             public string sourceType { get; set; }
+            public string accountNo { get; set; }
+            public bool isSelected { get; set; }
             public List<Enquirydetailsdata> itemDetails { get; set; }
         }
 
@@ -184,12 +184,15 @@ namespace Helper.Model
             public string ToDate { get; set; }
             public string token { get; set; }
             public string CustNameShipNameRefNo { get; set; }
-
             public string sourceType { get; set; }
 
+        }
+        public class shipSearchdata
+        {
+            public string token { get; set; }
+            public string CustNameShipNameRefNo { get; set; }
 
         }
-
         public class AccountData
         {
             public string ACCOUNTCODE { get; set; }

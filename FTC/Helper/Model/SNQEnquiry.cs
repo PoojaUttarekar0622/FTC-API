@@ -16,6 +16,11 @@ using Helper.Hub_Config;
 using System.Net.Mail;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using OfficeOpenXml.FormulaParsing.Excel.Functions.Math;
+using static OfficeOpenXml.ExcelErrorValue;
+using System.Text.RegularExpressions;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
 namespace Helper.Model
 {
     public class SNQEnquiry : ISNQEnquiry
@@ -61,7 +66,7 @@ namespace Helper.Model
                                      join statusmst in _datacontext.M_STATUS_CODE on enqheader.STATUS equals statusmst.STATUS_CODE
                                      join usrmst in _datacontext.MstUserTable on enqheader.OWNERSHIP equals usrmst.PK_USER_ID into usmt
                                      from userm in usmt.DefaultIfEmpty()
-                                     where (enqheader.STATUS == 3 || enqheader.STATUS == 2 || enqheader.STATUS == 6)
+                                     where ((enqheader.STATUS == 3 || enqheader.STATUS == 2 || enqheader.STATUS == 6) && enqheader.IS_ACTIVE == 1)
                                      select new
                                      {
                                          enqheader.PK_SNQENQUIRY_HDR_ID,
@@ -148,7 +153,7 @@ namespace Helper.Model
                                      join statusmst in _datacontext.M_STATUS_CODE on enqheader.STATUS equals statusmst.STATUS_CODE
                                      join usrmst in _datacontext.MstUserTable on enqheader.OWNERSHIP equals usrmst.PK_USER_ID into usmt
                                      from userm in usmt.DefaultIfEmpty()
-                                     where enqheader.STATUS == status
+                                     where enqheader.STATUS == status && enqheader.IS_ACTIVE == 1
                                      select new
                                      {
                                          enqheader.PK_SNQENQUIRY_HDR_ID,
@@ -304,8 +309,31 @@ namespace Helper.Model
                             };
                             lstClsEnquiryDtl.Add(objEnqDetails);
                         }
+                        var uniq = objdtlData.GroupBy(x => new { x.ACCOUNT_NO }).Select(y => y.First()).Distinct().ToList();
+                        if (uniq.Count() > 0)
+                        {
+                            if (uniq.Count() == 1)
+                            {
+                                foreach (var item in uniq)
+                                {
+                                    lstEnqhdrDetails.accountNo = item.ACCOUNT_NO;
+                                }
+                            }
+                            else
+                            {
+                                foreach (var item in uniq)
+                                {
+                                    string accNo = item.ACCOUNT_NO;
+                                    string updatedAcc = accNo;
+                                    string latestacc = lstEnqhdrDetails.accountNo + "," + updatedAcc;
+                                    lstEnqhdrDetails.accountNo = latestacc.TrimStart(',');
+                                }
+                            }
+
+                        }
                         lstEnqhdrDetails.itemDetails = lstClsEnquiryDtl;
                     }
+
                 }
                 else
                 {
@@ -347,8 +375,6 @@ namespace Helper.Model
                                        enquirydtl.ACCOUNT_DESCRIPTION,
                                        enquirydtl.SEQ_NOTEXT
                                    }).ToList();
-                    //Dtldata = Dtldata.Where(x => x.STATUS == 2 || x.STATUS == 5 || x.STATUS == 6);
-                    //var objdtlData = Dtldata.ToList();
                     List<Enquirydetailsdata> lstClsEnquiryDtl = new List<Enquirydetailsdata>();
                     if (Dtldata.Count > 0)
                     {
@@ -373,6 +399,29 @@ namespace Helper.Model
                                 seqNoText = item.SEQ_NOTEXT
                             };
                             lstClsEnquiryDtl.Add(objEnqDetails);
+                        }
+
+                        var uniq = Dtldata.GroupBy(x => new { x.ACCOUNT_NO }).Select(y => y.First()).Distinct().ToList();
+                        if (uniq.Count() > 0)
+                        {
+                            if (uniq.Count() == 1)
+                            {
+                                foreach (var item in uniq)
+                                {
+                                    lstEnqhdrDetails.accountNo = item.ACCOUNT_NO;
+                                }
+                            }
+                            else
+                            {
+                                foreach (var item in uniq)
+                                {
+                                    string accNo = item.ACCOUNT_NO;
+                                    string updatedAcc = accNo;
+                                    string latestacc = lstEnqhdrDetails.accountNo + "," + updatedAcc;
+                                    lstEnqhdrDetails.accountNo = latestacc.TrimStart(',');
+                                }
+                            }
+
                         }
                         lstEnqhdrDetails.itemDetails = lstClsEnquiryDtl;
                     }
@@ -401,255 +450,254 @@ namespace Helper.Model
                     //Duplicateentry Start
                     if (objEnquiry.enqrefNo != "")
                     {
-                            var DuplicateEntry = (from hdrdata in _datacontext.TSNQ_ENQUIRY_HDRTable
-                                                  where hdrdata.ENQREF_NO == objEnquiry.enqrefNo.Trim() && hdrdata.STATUS != 8
-                                                  select new
-                                                  {
-                                                      hdrdata.ENQREF_NO
-                                                  }).ToList();
-                            //Duplicateentry End
-                            #endregion DuplicateEntry
-                            if (duplicateEntry.ToUpper() == "YES" || DuplicateEntry.Count == 0)
+                        var DuplicateEntry = (from hdrdata in _datacontext.TSNQ_ENQUIRY_HDRTable
+                                              where hdrdata.ENQREF_NO == objEnquiry.enqrefNo.Trim() && hdrdata.STATUS != 8
+                                              select new
+                                              {
+                                                  hdrdata.ENQREF_NO
+                                              }).ToList();
+                        //Duplicateentry End
+                        #endregion DuplicateEntry
+                        if (duplicateEntry.ToUpper() == "YES" || DuplicateEntry.Count == 0)
+                        {
+                            string strPath = objEnquiry.docPath;
+                            //For partcode ml
+                            var lstpart = (from part in _datacontext.T_SNQ_ENQUIRY_ML_ITEMSTable
+                                           where part.IS_ACTIVE == 1
+                                           select new
+                                           {
+                                               part.PART_NAME,
+                                               part.PART_CODE
+                                           }).Distinct().ToList();
+                            //For Unit ml
+                            var lstunit = (from unit in _datacontext.MUOMTable
+                                           select new
+                                           {
+                                               unit.TEMPLATE_UOM,
+                                               unit.AS400_UOM
+                                           }).Distinct().ToList();
+                            TSNQ_ENQUIRY_HDR_ORG objenqheaderorg = new TSNQ_ENQUIRY_HDR_ORG();
+                            objenqheaderorg.FK_PROCESS_ID = 1;
+                            objenqheaderorg.FK_INSTANCE_ID = 1;
+                            objenqheaderorg.ENQUIRY_DATE = objEnquiry.enquiryDate;
+                            objenqheaderorg.OWNER = objEnquiry.owner;
+                            objenqheaderorg.OWNER_EMAILID = objEnquiry.ownerEmailid;
+                            objenqheaderorg.SHIP_NAME = objEnquiry.shipName;
+                            objenqheaderorg.ENQREF_NO = objEnquiry.enqrefNo;
+                            objenqheaderorg.DOC_PATH = this._Configuration.GetSection("DocumentPath")["IISSNQDocumentFolder"] + "" + Path.GetFileName(strPath);
+                            objenqheaderorg.CREATED_BY = 1;
+                            objenqheaderorg.CREATED_DATE = DateTime.Now;
+                            objenqheaderorg.ERROR_CODE = objEnquiry.errorCode;
+                            objenqheaderorg.MAKER = objEnquiry.maker;
+                            objenqheaderorg.TYPE = objEnquiry.type;
+                            objenqheaderorg.EQUIPMENT = objEnquiry.equipment;
+                            objenqheaderorg.SERIAL_NO = objEnquiry.serialNo;
+                            objenqheaderorg.DISCOUNT_AMOUNT = objEnquiry.discountAmount;
+                            objenqheaderorg.NET_AMOUNT = objEnquiry.netAmount;
+                            objenqheaderorg.PORT = objEnquiry.port;
+                            objenqheaderorg.DELIVERY_DATE = objEnquiry.deliveryDate;
+                            objenqheaderorg.AS400_MAPPING_PORT = GetPortMapping(objEnquiry.shipName, objEnquiry.port);
+                            if (objEnquiry.sourceType.ToUpper() == "MESPAS")
                             {
-                                string strPath = objEnquiry.docPath;
-                                //For partcode ml
-                                var lstpart = (from part in _datacontext.T_SNQ_ENQUIRY_ML_ITEMSTable
-                                               where part.IS_ACTIVE == 1
-                                               select new
-                                               {
-                                                   part.PART_NAME,
-                                                   part.PART_CODE
-                                               }).Distinct().ToList();
-                                //For Unit ml
-                                var lstunit = (from unit in _datacontext.MUOMTable
-                                               select new
-                                               {
-                                                   unit.TEMPLATE_UOM,
-                                                   unit.AS400_UOM
-                                               }).Distinct().ToList();
-                                TSNQ_ENQUIRY_HDR_ORG objenqheaderorg = new TSNQ_ENQUIRY_HDR_ORG();
-                                objenqheaderorg.FK_PROCESS_ID = 1;
-                                objenqheaderorg.FK_INSTANCE_ID = 1;
-                                objenqheaderorg.ENQUIRY_DATE = objEnquiry.enquiryDate;
-                                objenqheaderorg.OWNER = objEnquiry.owner;
-                                objenqheaderorg.OWNER_EMAILID = objEnquiry.ownerEmailid;
-                                objenqheaderorg.SHIP_NAME = objEnquiry.shipName;
-                                objenqheaderorg.ENQREF_NO = objEnquiry.enqrefNo;
-                                objenqheaderorg.DOC_PATH = this._Configuration.GetSection("DocumentPath")["IISSNQDocumentFolder"] + "" + Path.GetFileName(strPath);
-                                objenqheaderorg.CREATED_BY = 1;
-                                objenqheaderorg.CREATED_DATE = DateTime.Now;
-                                objenqheaderorg.ERROR_CODE = objEnquiry.errorCode;
-                                objenqheaderorg.MAKER = objEnquiry.maker;
-                                objenqheaderorg.TYPE = objEnquiry.type;
-                                objenqheaderorg.EQUIPMENT = objEnquiry.equipment;
-                                objenqheaderorg.SERIAL_NO = objEnquiry.serialNo;
-                                objenqheaderorg.DISCOUNT_AMOUNT = objEnquiry.discountAmount;
-                                objenqheaderorg.NET_AMOUNT = objEnquiry.netAmount;
-                                objenqheaderorg.PORT = objEnquiry.port;
-                                objenqheaderorg.DELIVERY_DATE = objEnquiry.deliveryDate;
-                                objenqheaderorg.AS400_MAPPING_PORT = GetPortMapping(objEnquiry.shipName, objEnquiry.port);
-                                if (objEnquiry.sourceType.ToUpper() == "MESPAS")
+                                objenqheaderorg.SOURCE_TYPE = objEnquiry.sourceType;
+                            }
+                            else
+                            {
+                                objenqheaderorg.SOURCE_TYPE = SourceType;
+                            }
+                            _datacontext.TSNQ_ENQUIRY_HDR_ORGTable.Add(objenqheaderorg);
+                            _datacontext.SaveChanges();
+                            long PKENQHDRORGID = objenqheaderorg.PK_SNQENQUIRY_HDR_ID;
+
+                            #region
+                            TSNQ_ENQUIRY_HDR objenqheader = new TSNQ_ENQUIRY_HDR();
+                            objenqheader.FK_PROCESS_ID = 1;
+                            objenqheader.FK_INSTANCE_ID = 1;
+                            objenqheader.ENQUIRY_DATE = objEnquiry.enquiryDate;
+                            objenqheader.OWNER = GetCustomerMapping(objEnquiry.owner);
+                            objenqheader.OWNER_EMAILID = objEnquiry.ownerEmailid;
+                            objenqheader.SHIP_NAME = objEnquiry.shipName;
+                            objenqheader.ENQREF_NO = objEnquiry.enqrefNo;
+                            objenqheader.DOC_PATH = this._Configuration.GetSection("DocumentPath")["IISSNQDocumentFolder"] + "" + Path.GetFileName(strPath);
+                            objenqheader.STATUS = 0;//GetAutoverification(objEnquiry.owner, objEnquiry.status);//Convert.ToInt32(objEnquiry.status);
+                            objenqheader.QUOTATION_NO = objEnquiry.quotationNo;
+                            objenqheader.CREATED_BY = 1;
+                            objenqheader.CREATED_DATE = DateTime.Now;
+                            objenqheader.ERROR_CODE = objEnquiry.errorCode;
+                            objenqheader.MAKER = objEnquiry.maker;
+                            objenqheader.TYPE = objEnquiry.type;
+                            objenqheader.EQUIPMENT = objEnquiry.equipment;
+                            objenqheader.SERIAL_NO = objEnquiry.serialNo;
+                            objenqheader.DISCOUNT_AMOUNT = objEnquiry.discountAmount;
+                            objenqheader.NET_AMOUNT = objEnquiry.netAmount;
+                            objenqheader.EMAIL_RECEIVED_AT = objEnquiry.emailReceivedat;
+                            objenqheader.EMAIL_PROCESSED_AT = objEnquiry.emailProcessedat;
+                            objenqheader.IN_ERROR_AT = "";
+                            objenqheader.VERIFIED_AT = "";
+                            objenqheader.UPDATED_AT = "";
+                            objenqheader.QUOTATION_CREATED_AT = "";
+                            objenqheader.SAVE_AS_DRAFT = "";
+                            objenqheader.PORT = objEnquiry.port;
+                            objenqheader.DELIVERY_DATE = objEnquiry.deliveryDate;
+                            objenqheader.AS400_MAPPING_PORT = GetPortMapping(objEnquiry.shipName, objEnquiry.port);
+                            objenqheader.MAIL_BODY = objEnquiry.mailBody;
+                            objenqheader.MAIL_SUBJECT = objEnquiry.emailSubject;
+                            objenqheader.RFQ_URL = objEnquiry.rfqUrl;
+                            objenqheader.OWNERSHIP = 0;
+                            objenqheader.ERROR_VERIFIED_COUNTER = 0;
+                            objenqheader.IS_ACTIVE = 1;
+                            if (objEnquiry.sourceType.ToUpper() == "MESPAS")
+                            {
+                                objenqheader.SOURCE_TYPE = objEnquiry.sourceType;
+                                objenqheader.IS_UPDATED_EQUIPMENT_WITH_ML = objEnquiry.IsUpdatedEquipmentWithML;
+                                objenqheader.IS_UPDATED_MAKER_WITH_ML = objEnquiry.IsUpdatedMakerWithML;
+                            }
+                            else
+                            {
+                                objenqheader.SOURCE_TYPE = SourceType;
+                                objenqheader.IS_UPDATED_EQUIPMENT_WITH_ML = 0;
+                                objenqheader.IS_UPDATED_MAKER_WITH_ML = 0;
+                            }
+                            if (objEnquiry.sourceType.ToUpper() == "MESPAS")
+                            {
+                                objenqheader.EVENT_ID = objEnquiry.eventId;
+                            }
+                            else
+                            {
+                                objenqheader.EVENT_ID = 0;
+                            }
+                            _datacontext.TSNQ_ENQUIRY_HDRTable.Add(objenqheader);
+                            _datacontext.SaveChanges();
+                            #endregion
+
+                            long PKENQHDRID = objenqheader.PK_SNQENQUIRY_HDR_ID;
+                            /* if (objenqheader.STATUS == (int)verifiedStatus)
+                             {
+                                 string verfiedBy = this._Configuration.GetSection("BOTVerfiied")["VerifiedBy"];
+                                 TSNQ_ENQUIRY_HDR headerobj = (from hdr in _datacontext.TSNQ_ENQUIRY_HDRTable where hdr.PK_SNQENQUIRY_HDR_ID == PKENQHDRID select hdr).FirstOrDefault();
+                                 if (headerobj != null)
+                                 {
+                                     headerobj.VERIFIED_BY = verfiedBy;
+                                     _datacontext.SaveChanges();
+                                 }
+                             }*/
+                            //save multiple header levels document path
+                            if (objEnquiry.docHdrDetails != null && PKENQHDRID != 0)
+                            {
+                                foreach (var item in objEnquiry.docHdrDetails)
                                 {
-                                    objenqheaderorg.SOURCE_TYPE = objEnquiry.sourceType;
-                                }
-                                else
-                                {
-                                    objenqheaderorg.SOURCE_TYPE = SourceType;
-                                }
-                                _datacontext.TSNQ_ENQUIRY_HDR_ORGTable.Add(objenqheaderorg);
-                                _datacontext.SaveChanges();
-                                long PKENQHDRORGID = objenqheaderorg.PK_SNQENQUIRY_HDR_ID;
-                                TSNQ_ENQUIRY_HDR objenqheader = new TSNQ_ENQUIRY_HDR();
-                                objenqheader.FK_PROCESS_ID = 1;
-                                objenqheader.FK_INSTANCE_ID = 1;
-                                objenqheader.ENQUIRY_DATE = objEnquiry.enquiryDate;
-                                objenqheader.OWNER = GetCustomerMapping(objEnquiry.owner);
-                                objenqheader.OWNER_EMAILID = objEnquiry.ownerEmailid;
-                                objenqheader.SHIP_NAME = objEnquiry.shipName;
-                                objenqheader.ENQREF_NO = objEnquiry.enqrefNo;
-                                objenqheader.DOC_PATH = this._Configuration.GetSection("DocumentPath")["IISSNQDocumentFolder"] + "" + Path.GetFileName(strPath);
-                                objenqheader.STATUS = 0;//GetAutoverification(objEnquiry.owner, objEnquiry.status);//Convert.ToInt32(objEnquiry.status);
-                                objenqheader.QUOTATION_NO = objEnquiry.quotationNo;
-                                objenqheader.CREATED_BY = 1;
-                                objenqheader.CREATED_DATE = DateTime.Now;
-                                objenqheader.ERROR_CODE = objEnquiry.errorCode;
-                                objenqheader.MAKER = objEnquiry.maker;
-                                objenqheader.TYPE = objEnquiry.type;
-                                objenqheader.EQUIPMENT = objEnquiry.equipment;
-                                objenqheader.SERIAL_NO = objEnquiry.serialNo;
-                                objenqheader.DISCOUNT_AMOUNT = objEnquiry.discountAmount;
-                                objenqheader.NET_AMOUNT = objEnquiry.netAmount;
-                                objenqheader.EMAIL_RECEIVED_AT = objEnquiry.emailReceivedat;
-                                objenqheader.EMAIL_PROCESSED_AT = objEnquiry.emailProcessedat;
-                                objenqheader.IN_ERROR_AT = "";
-                                objenqheader.VERIFIED_AT = "";
-                                objenqheader.UPDATED_AT = "";
-                                objenqheader.QUOTATION_CREATED_AT = "";
-                                objenqheader.SAVE_AS_DRAFT = "";
-                                objenqheader.PORT = objEnquiry.port;
-                                objenqheader.DELIVERY_DATE = objEnquiry.deliveryDate;
-                                objenqheader.AS400_MAPPING_PORT = GetPortMapping(objEnquiry.shipName, objEnquiry.port);
-                                objenqheader.MAIL_BODY = objEnquiry.mailBody;
-                                objenqheader.MAIL_SUBJECT = objEnquiry.emailSubject;
-                                objenqheader.RFQ_URL = objEnquiry.rfqUrl;
-                                objenqheader.OWNERSHIP = 0;
-                                objenqheader.ERROR_VERIFIED_COUNTER = 0;
-                                if (objEnquiry.sourceType.ToUpper() == "MESPAS")
-                                {
-                                    objenqheader.SOURCE_TYPE = objEnquiry.sourceType;
-                                    objenqheader.IS_UPDATED_EQUIPMENT_WITH_ML = objEnquiry.IsUpdatedEquipmentWithML;
-                                    objenqheader.IS_UPDATED_MAKER_WITH_ML = objEnquiry.IsUpdatedMakerWithML;
-                                }
-                                else
-                                {
-                                    objenqheader.SOURCE_TYPE = SourceType;
-                                    objenqheader.IS_UPDATED_EQUIPMENT_WITH_ML = 0;
-                                    objenqheader.IS_UPDATED_MAKER_WITH_ML = 0;
-                                }
-                                if (objEnquiry.sourceType.ToUpper() == "MESPAS")
-                                {
-                                    objenqheader.EVENT_ID = objEnquiry.eventId;
-                                }
-                                else
-                                {
-                                    objenqheader.EVENT_ID = 0;
-                                }
-                                _datacontext.TSNQ_ENQUIRY_HDRTable.Add(objenqheader);
-                                _datacontext.SaveChanges();
-                                long PKENQHDRID = objenqheader.PK_SNQENQUIRY_HDR_ID;
-                               /* if (objenqheader.STATUS == (int)verifiedStatus)
-                                {
-                                    string verfiedBy = this._Configuration.GetSection("BOTVerfiied")["VerifiedBy"];
-                                    TSNQ_ENQUIRY_HDR headerobj = (from hdr in _datacontext.TSNQ_ENQUIRY_HDRTable where hdr.PK_SNQENQUIRY_HDR_ID == PKENQHDRID select hdr).FirstOrDefault();
-                                    if (headerobj != null)
+                                    T_SNQ_DOCUMENT_HDR objenqdetails = new T_SNQ_DOCUMENT_HDR();
                                     {
-                                        headerobj.VERIFIED_BY = verfiedBy;
-                                        _datacontext.SaveChanges();
+                                        objenqdetails.ENQUIRY_HDR_ID = PKENQHDRID;
+                                        objenqdetails.DOC_PATH = item.docPath;
+                                        objenqdetails.ERROR_DESCRIPTION = item.errorDescription;
+                                        objenqdetails.CREATEBY = 1;
+                                        objenqdetails.CREATEDAT = DateTime.Now;
+                                        objenqdetails.ISACTIVE = 1;
+                                    };
+                                    _datacontext.T_SNQ_DOCUMENT_HDRTable.Add(objenqdetails);
+                                    _datacontext.SaveChanges();
+                                }
+                            }
+                            if (objEnquiry.itemDetails != null && PKENQHDRID != 0)
+                            {
+                                int count = 0;
+                                foreach (var item in objEnquiry.itemDetails)
+                                {
+                                    #region
+                                    TSNQ_ENQUIRY_DTL_ORG objenqdetailsorg = new TSNQ_ENQUIRY_DTL_ORG();
+                                    {
+                                        objenqdetailsorg.FK_SNQENQUIRY_HDR_ID = PKENQHDRORGID;
+                                        objenqdetailsorg.PART_CODE = item.partCode;
+                                        objenqdetailsorg.PART_NAME = item.partName;
+                                        objenqdetailsorg.QUANTITY = item.quantity;
+                                        objenqdetailsorg.UNIT = item.unit;
+                                        objenqdetailsorg.PRICE = item.price;
+                                        objenqdetailsorg.COST = item.cost;
+                                        objenqdetailsorg.UPDATED_DATE = DateTime.Now;
+                                        objenqdetailsorg.SUPPLIER = item.supplier;
+                                        objenqdetailsorg.SEQ_NO = Convert.ToInt32(item.seqNo);
+                                        objenqdetailsorg.ERROR_CODE = item.errorCode;
+                                        objenqdetailsorg.ACCOUNT_NO = item.accountNo;
+                                        objenqdetailsorg.ACCOUNT_DESCRIPTION = item.accountDescription;
+                                    };
+                                    _datacontext.TSNQ_ENQUIRY_DTL_ORGTable.Add(objenqdetailsorg);
+                                    _datacontext.SaveChanges();
+                                    #endregion
+                                    //ML Logic For PartCode/Impa Code
+                                    #region ML Logic to find IMPA code
+                                    string partCode = item.partCode;
+                                    string partName = item.partName;
+                                    if (partCode == null)
+                                    {
+                                        partCode = " ";
                                     }
-                                }*/
-                                //save multiple header levels document path
-                                if (objEnquiry.docHdrDetails != null && PKENQHDRID != 0)
-                                {
-                                    foreach (var item in objEnquiry.docHdrDetails)
+                                    if (MLLogicSNQ == "YES")
                                     {
-                                        T_SNQ_DOCUMENT_HDR objenqdetails = new T_SNQ_DOCUMENT_HDR();
+                                        if ((GetCustomerMapping(objEnquiry.owner) == jpnOwner
+                                            || GetCustomerMapping(objEnquiry.owner) == europOwner ||
+                                            GetCustomerMapping(objEnquiry.owner) == hkOwner) && partCode.Length > 6)
                                         {
-                                            objenqdetails.ENQUIRY_HDR_ID = PKENQHDRID;
-                                            objenqdetails.DOC_PATH = item.docPath;
-                                            objenqdetails.ERROR_DESCRIPTION = item.errorDescription;
-                                            objenqdetails.CREATEBY = 1;
-                                            objenqdetails.CREATEDAT = DateTime.Now;
-                                            objenqdetails.ISACTIVE = 1;
-                                        };
-                                        _datacontext.T_SNQ_DOCUMENT_HDRTable.Add(objenqdetails);
-                                        _datacontext.SaveChanges();
-                                    }
-                                }
-                             if (objEnquiry.itemDetails != null && PKENQHDRID != 0)
-                                {
-                                    int count = 0;
-                                    foreach (var item in objEnquiry.itemDetails)
-                                    {
-                                        #region
-                                        TSNQ_ENQUIRY_DTL_ORG objenqdetailsorg = new TSNQ_ENQUIRY_DTL_ORG();
-                                        {
-                                            objenqdetailsorg.FK_SNQENQUIRY_HDR_ID = PKENQHDRORGID;
-                                            objenqdetailsorg.PART_CODE = item.partCode;
-                                            objenqdetailsorg.PART_NAME = item.partName;
-                                            objenqdetailsorg.QUANTITY = item.quantity;
-                                            objenqdetailsorg.UNIT = item.unit;
-                                            objenqdetailsorg.PRICE = item.price;
-                                            objenqdetailsorg.COST = item.cost;
-                                            objenqdetailsorg.UPDATED_DATE = DateTime.Now;
-                                            objenqdetailsorg.SUPPLIER = item.supplier;
-                                            objenqdetailsorg.SEQ_NO = Convert.ToInt32(item.seqNo);
-                                            objenqdetailsorg.ERROR_CODE = item.errorCode;
-                                            objenqdetailsorg.ACCOUNT_NO = item.accountNo;
-                                            objenqdetailsorg.ACCOUNT_DESCRIPTION = item.accountDescription;
-                                        };
-                                        _datacontext.TSNQ_ENQUIRY_DTL_ORGTable.Add(objenqdetailsorg);
-                                        _datacontext.SaveChanges();
-                                        #endregion
-                                        //ML Logic For PartCode/Impa Code
-                                        #region ML Logic to find IMPA code
-                                        string partCode = item.partCode;
-                                        string partName = item.partName;
-                                        if (partCode == null)
-                                        {
-                                            partCode = " ";
+                                            partName = partName + " " + item.partCode;
+                                            partCode = "";
                                         }
-                                        if (MLLogicSNQ == "YES")
+                                        else if ((partCode == null || partCode.Length != 6) && !string.IsNullOrEmpty(partName))
                                         {
-                                            if ((GetCustomerMapping(objEnquiry.owner) == jpnOwner
-                                                || GetCustomerMapping(objEnquiry.owner) == europOwner ||
-                                                GetCustomerMapping(objEnquiry.owner) == hkOwner) && partCode.Length > 6)
+                                            double percentage = 0;
+                                            string matchingPercent = this._Configuration.GetSection("MatchingPercent")["MATCHINGVALUE"];
+                                            for (int counter = 0; counter < lstpart.Count; counter++)
                                             {
-                                                partName = partName + " " + item.partCode;
-                                                partCode = "";
-                                            }
-                                            else if ((partCode == null || partCode.Length != 6) && !string.IsNullOrEmpty(partName))
-                                            {
-                                                double percentage = 0;
-                                                string matchingPercent = this._Configuration.GetSection("MatchingPercent")["MATCHINGVALUE"];
-                                                for (int counter = 0; counter < lstpart.Count; counter++)
+                                                var lcs = partName.LongestCommonSubsequence(lstpart[counter].PART_NAME);
+                                                if (lcs.Item2 > double.Parse(matchingPercent) && percentage < lcs.Item2 && partCode.Length <= lstpart[counter].PART_CODE.Length)
                                                 {
-                                                    var lcs = partName.LongestCommonSubsequence(lstpart[counter].PART_NAME);
-                                                    if (lcs.Item2 > double.Parse(matchingPercent) && percentage < lcs.Item2 && partCode.Length <= lstpart[counter].PART_CODE.Length)
+                                                    //Logger1.Activity("Part Name:" + " " + partName + "," + " Previous Part Code:" + " " + partCode + "," + " New Part Code:" + " " + lstpart[counter].PARTCODE + "," + " Percentage:" + lcs.Item2 + "," + " " + " LCS string" + lcs.Item1);
+                                                    percentage = lcs.Item2;
+                                                    partCode = lstpart[counter].PART_CODE;
+                                                    isUpdatedWithML = 1;
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {
+                                            partCode = item.partCode;
+                                        }
+                                    }
+                                    #endregion ML Logic to find IMPA code
+                                    //ML Logic For PartCode/Impa Code
+                                    //unit mapping
+                                    #region unit manipulation
+                                    string AS400unit = "";
+                                    string ItmDescwithUnit = "";
+                                    if (!string.IsNullOrEmpty(item.unit))
+                                    {
+                                        var UnitOM = (from hdr in _datacontext.MUOMTable
+                                                      where hdr.TEMPLATE_UOM.ToLower() == item.unit.ToString().ToLower()
+                                                      select hdr.AS400_UOM).ToList();
+                                        if (UnitOM.Count > 0)
+                                        {
+                                            AS400unit = UnitOM[0];
+                                            ItmDescwithUnit = partName;
+                                        }
+                                        else if (item.unit.ToString().Length > 3)
+                                        {
+                                            ItmDescwithUnit = partName + " " + item.unit;
+                                            double percentage = 0;
+                                            string matchingPercent = this._Configuration.GetSection("MatchingPercentForUnit")["MATCHINGVALUEFORUNIT"];
+                                            if (lstunit != null)
+                                            {
+                                                for (int counter = 0; counter < lstunit.Count; counter++)
+                                                {
+                                                    var lcs = item.unit.ToString().ToUpper().Substring(0, 4).LongestCommonSubsequence(lstunit[counter].TEMPLATE_UOM.ToUpper());
+                                                    if (lcs.Item2 > double.Parse(matchingPercent) && percentage < lcs.Item2)
                                                     {
-                                                        //Logger1.Activity("Part Name:" + " " + partName + "," + " Previous Part Code:" + " " + partCode + "," + " New Part Code:" + " " + lstpart[counter].PARTCODE + "," + " Percentage:" + lcs.Item2 + "," + " " + " LCS string" + lcs.Item1);
                                                         percentage = lcs.Item2;
-                                                        partCode = lstpart[counter].PART_CODE;
-                                                        isUpdatedWithML = 1;
+                                                        AS400unit = lstunit[counter].AS400_UOM;
                                                     }
                                                 }
                                             }
-                                            else
-                                            {
-                                                partCode = item.partCode;
-                                            }
-                                        }
-                                        #endregion ML Logic to find IMPA code
-                                        //ML Logic For PartCode/Impa Code
-                                        //unit mapping
-                                        #region unit manipulation
-                                        string AS400unit = "";
-                                        string ItmDescwithUnit = "";
-                                        if (!string.IsNullOrEmpty(item.unit))
-                                        {
-                                            var UnitOM = (from hdr in _datacontext.MUOMTable
-                                                          where hdr.TEMPLATE_UOM.ToLower() == item.unit.ToString().ToLower()
-                                                          select hdr.AS400_UOM).ToList();
-                                            if (UnitOM.Count > 0)
-                                            {
-                                                AS400unit = UnitOM[0];
-                                                ItmDescwithUnit = partName;
-                                            }
-                                            else if (item.unit.ToString().Length > 3)
-                                            {
-                                                ItmDescwithUnit = partName + " " + item.unit;
-                                                double percentage = 0;
-                                                string matchingPercent = this._Configuration.GetSection("MatchingPercentForUnit")["MATCHINGVALUEFORUNIT"];
-                                                if (lstunit != null)
-                                                {
-                                                    for (int counter = 0; counter < lstunit.Count; counter++)
-                                                    {
-                                                        var lcs = item.unit.ToString().ToUpper().Substring(0, 4).LongestCommonSubsequence(lstunit[counter].TEMPLATE_UOM.ToUpper());
-                                                        if (lcs.Item2 > double.Parse(matchingPercent) && percentage < lcs.Item2)
-                                                        {
-                                                            percentage = lcs.Item2;
-                                                            AS400unit = lstunit[counter].AS400_UOM;
-                                                        }
-                                                    }
-                                                }
-                                                if (AS400unit == "")
-                                                {
-                                                    AS400unit = item.unit;
-                                                }
-                                            }
-                                            else
+                                            if (AS400unit == "")
                                             {
                                                 AS400unit = item.unit;
-                                                ItmDescwithUnit = partName;
                                             }
                                         }
                                         else
@@ -657,122 +705,129 @@ namespace Helper.Model
                                             AS400unit = item.unit;
                                             ItmDescwithUnit = partName;
                                         }
-                                        #endregion unit manipulation
-                                        //end unit mapping
-                                        #region
-                                        string quantity = "";
-                                        if (item.quantity.Contains(","))
-                                        {
-                                            quantity = item.quantity.Replace(",", "");
-                                        }
-                                        else
-                                        {
-                                            quantity = item.quantity.Trim();
-                                        }
-                                        int qty = quantity.Count(x => x == '.');
-                                        #endregion
-                                        #region
-                                        if (qty > 1)
-                                        {
-                                            quantity = quantity.Remove(quantity.IndexOf('.'), 1);
-                                        }
-                                        else
-                                        {
-                                            quantity = item.quantity.Trim();
-                                        }
-                                        #endregion
-                                        if (!String.IsNullOrEmpty(quantity))
-                                        {
-                                            string accno = GetAccountCodeMapping(item.accountNo, item.accountDescription, objEnquiry.owner);
-                                            var query = (from seq in _datacontext.TSNQ_ENQUIRY_DTLTable where seq.ACCOUNT_NO == accno && seq.FK_SNQENQUIRY_HDR_ID == PKENQHDRID select seq.SEQ_NO);//.ToList().LastOrDefault();
-                                            int maxseqNo;
-                                            maxseqNo = query.Any() ? query.Max() : 0;
-                                            if (maxseqNo == 0)
-                                            {
-                                                maxseqNo = 0;
-                                            }
-                                            maxseqNo = maxseqNo + 1;
-                                            #region
-                                            TSNQ_ENQUIRY_DTL objenqdetails = new TSNQ_ENQUIRY_DTL();
-                                            {
-                                                objenqdetails.FK_SNQENQUIRY_HDR_ID = PKENQHDRID;
-                                                objenqdetails.PART_CODE = partCode;
-                                                objenqdetails.PART_NAME = ItmDescwithUnit;
-                                                objenqdetails.QUANTITY = quantity;
-                                                objenqdetails.UNIT = AS400unit;
-                                                objenqdetails.PRICE = item.price;
-                                                objenqdetails.COST = item.cost;
-                                                objenqdetails.UPDATED_DATE = DateTime.Now;
-                                                objenqdetails.SUPPLIER = item.supplier;
-                                                objenqdetails.STATUS = GetAutoverification(objenqheader.OWNER, objEnquiry.status);// Convert.ToInt32(item.status);
-                                                objenqdetails.SEQ_NO = maxseqNo;//Convert.ToInt32(item.seqNo);
-                                                objenqdetails.ERROR_CODE = item.errorCode;
-                                                objenqdetails.ACCOUNT_NO = accno;
-                                                objenqdetails.ACCOUNT_DESCRIPTION = item.accountDescription;
-                                                objenqdetails.IS_UPDATED_WITH_ML = isUpdatedWithML;
-                                            };
-                                            #endregion
-                                            _datacontext.TSNQ_ENQUIRY_DTLTable.Add(objenqdetails);
-                                            _datacontext.SaveChanges();
-                                            #region
-                                            long PKDTLID = objenqdetails.PK_SNQENQUIRY_DTL_ID;
-                                            if (item.docdtlDetails != null && PKDTLID != 0)
-                                            {
-                                                foreach (var item2 in item.docdtlDetails)
-                                                {
-                                                    T_SNQ_DOCUMENT_DTL objdocdtl = new T_SNQ_DOCUMENT_DTL();
-                                                    {
-                                                        objdocdtl.ENQUIRY_DTL_ID = PKDTLID;
-                                                        objdocdtl.DOC_PATH = item2.docPath;
-                                                        objdocdtl.ERROR_DESCRIPTION = item2.errorDescription;
-                                                        objdocdtl.CREATEBY = 1;
-                                                        objdocdtl.CREATEDAT = DateTime.Now;
-                                                        objdocdtl.ISACTIVE = 1;
-                                                    };
-                                                    _datacontext.T_SNQ_DOCUMENT_DTLTable.Add(objdocdtl);
-                                                    _datacontext.SaveChanges();
-                                                }
-                                            }
-                                            #endregion
-                                        }
                                     }
-                                    // 10 items in enquiry. if in this enquiry 1 items has is different account code out of 10 then we set default account code
-                                    if (count > 0)
+                                    else
                                     {
-                                        var Dtldata = (from dtl in _datacontext.TSNQ_ENQUIRY_DTLTable
-                                                       where dtl.FK_SNQENQUIRY_HDR_ID == PKENQHDRID
-                                                       select new
-                                                       {
-                                                           dtl.PK_SNQENQUIRY_DTL_ID,
-                                                           dtl.FK_SNQENQUIRY_HDR_ID,
-                                                           dtl.PART_CODE,
-                                                           dtl.PART_NAME,
-                                                           dtl.QUANTITY,
-                                                           dtl.UNIT,
-                                                           dtl.PRICE,
-                                                           dtl.COST,
-                                                           dtl.STATUS,
-                                                           dtl.SUPPLIER,
-                                                           dtl.UPDATED_DATE,
-                                                           dtl.ACCOUNT_NO,
-                                                           dtl.ACCOUNT_DESCRIPTION,
-                                                           dtl.SEQ_NO,
-                                                           dtl.SEQ_NOTEXT
-                                                       }).ToList();
-                                        if (Dtldata.Count > 0)
+                                        AS400unit = item.unit;
+                                        ItmDescwithUnit = partName;
+                                    }
+                                    #endregion unit manipulation
+                                    //end unit mapping
+                                    #region
+                                    string quantity = "";
+                                    if (item.quantity.Contains(","))
+                                    {
+                                        quantity = item.quantity.Replace(",", "");
+                                    }
+                                    else
+                                    {
+                                        quantity = item.quantity.Trim();
+                                    }
+                                    int qty = quantity.Count(x => x == '.');
+                                    #endregion
+                                    #region
+                                    if (qty > 1)
+                                    {
+                                        quantity = quantity.Remove(quantity.IndexOf('.'), 1);
+                                    }
+                                    else
+                                    {
+                                        quantity = item.quantity.Trim();
+                                    }
+                                    #endregion
+                                    if (!String.IsNullOrEmpty(quantity))
+                                    {
+                                        string ownerNm = GetCustomerMapping(objEnquiry.owner);
+                                        string accno = GetAccountCodeMapping(item.accountNo, item.accountDescription, ownerNm , objEnquiry.enqrefNo);
+                                        var query = (from seq in _datacontext.TSNQ_ENQUIRY_DTLTable where seq.ACCOUNT_NO == accno && seq.FK_SNQENQUIRY_HDR_ID == PKENQHDRID select seq.SEQ_NO);//.ToList().LastOrDefault();
+                                        int maxseqNo;
+                                        maxseqNo = query.Any() ? query.Max() : 0;
+                                        if (maxseqNo == 0)
                                         {
-                                            foreach (var item in Dtldata)
+                                            maxseqNo = 0;
+                                        }
+                                        maxseqNo = maxseqNo + 1;
+                                        #region
+                                        TSNQ_ENQUIRY_DTL objenqdetails = new TSNQ_ENQUIRY_DTL();
+                                        {
+                                            objenqdetails.FK_SNQENQUIRY_HDR_ID = PKENQHDRID;
+                                            objenqdetails.PART_CODE = partCode;
+                                            objenqdetails.PART_NAME = ItmDescwithUnit;
+                                            objenqdetails.QUANTITY = quantity;
+                                            objenqdetails.UNIT = AS400unit;
+                                            objenqdetails.PRICE = item.price;
+                                            objenqdetails.COST = item.cost;
+                                            objenqdetails.UPDATED_DATE = DateTime.Now;
+                                            objenqdetails.SUPPLIER = item.supplier;
+                                            objenqdetails.STATUS = GetAutoverification(objenqheader.OWNER, objEnquiry.status);// Convert.ToInt32(item.status);
+                                            objenqdetails.SEQ_NO = maxseqNo;//Convert.ToInt32(item.seqNo);
+                                            objenqdetails.ERROR_CODE = item.errorCode;
+                                            objenqdetails.ACCOUNT_NO = accno;
+                                            objenqdetails.ACCOUNT_DESCRIPTION = item.accountDescription;
+                                            objenqdetails.IS_UPDATED_WITH_ML = isUpdatedWithML;
+                                        };
+                                        #endregion
+                                        _datacontext.TSNQ_ENQUIRY_DTLTable.Add(objenqdetails);
+                                        _datacontext.SaveChanges();
+                                        #region
+                                        long PKDTLID = objenqdetails.PK_SNQENQUIRY_DTL_ID;
+                                        if (item.docdtlDetails != null && PKDTLID != 0)
+                                        {
+                                            foreach (var item2 in item.docdtlDetails)
                                             {
-                                                TSNQ_ENQUIRY_DTL objdtl = (from dtl in _datacontext.TSNQ_ENQUIRY_DTLTable where dtl.PK_SNQENQUIRY_DTL_ID == item.PK_SNQENQUIRY_DTL_ID select dtl).FirstOrDefault();
-                                                if (objdtl != null)
+                                                T_SNQ_DOCUMENT_DTL objdocdtl = new T_SNQ_DOCUMENT_DTL();
                                                 {
-                                                    objdtl.ACCOUNT_NO = defaultAccountCode;
-                                                    _datacontext.SaveChanges();
-                                                }
+                                                    objdocdtl.ENQUIRY_DTL_ID = PKDTLID;
+                                                    objdocdtl.DOC_PATH = item2.docPath;
+                                                    objdocdtl.ERROR_DESCRIPTION = item2.errorDescription;
+                                                    objdocdtl.CREATEBY = 1;
+                                                    objdocdtl.CREATEDAT = DateTime.Now;
+                                                    objdocdtl.ISACTIVE = 1;
+                                                };
+                                                _datacontext.T_SNQ_DOCUMENT_DTLTable.Add(objdocdtl);
+                                                _datacontext.SaveChanges();
+                                            }
+                                        }
+                                        #endregion
+                                    }
+                                }
+                                // 10 items in enquiry. if in this enquiry 1 items has is different account code out of 10 then we set default account code
+                                if (count > 0)
+                                {
+                                    var Dtldata = (from dtl in _datacontext.TSNQ_ENQUIRY_DTLTable
+                                                   where dtl.FK_SNQENQUIRY_HDR_ID == PKENQHDRID
+                                                   select new
+                                                   {
+                                                       dtl.PK_SNQENQUIRY_DTL_ID,
+                                                       dtl.FK_SNQENQUIRY_HDR_ID,
+                                                       dtl.PART_CODE,
+                                                       dtl.PART_NAME,
+                                                       dtl.QUANTITY,
+                                                       dtl.UNIT,
+                                                       dtl.PRICE,
+                                                       dtl.COST,
+                                                       dtl.STATUS,
+                                                       dtl.SUPPLIER,
+                                                       dtl.UPDATED_DATE,
+                                                       dtl.ACCOUNT_NO,
+                                                       dtl.ACCOUNT_DESCRIPTION,
+                                                       dtl.SEQ_NO,
+                                                       dtl.SEQ_NOTEXT
+                                                   }).ToList();
+                                    if (Dtldata.Count > 0)
+                                    {
+                                        foreach (var item in Dtldata)
+                                        {
+                                            TSNQ_ENQUIRY_DTL objdtl = (from dtl in _datacontext.TSNQ_ENQUIRY_DTLTable where dtl.PK_SNQENQUIRY_DTL_ID == item.PK_SNQENQUIRY_DTL_ID select dtl).FirstOrDefault();
+                                            if (objdtl != null)
+                                            {
+                                                objdtl.ACCOUNT_NO = defaultAccountCode;
+                                                _datacontext.SaveChanges();
                                             }
                                         }
                                     }
                                 }
+                            }
                             if (objEnquiry.itemDetails.Count > 0)
                             {
                                 TSNQ_ENQUIRY_HDR objdt = (from hdr in _datacontext.TSNQ_ENQUIRY_HDRTable where hdr.PK_SNQENQUIRY_HDR_ID == PKENQHDRID select hdr).FirstOrDefault();
@@ -797,12 +852,12 @@ namespace Helper.Model
                                 objenqheader.STATUS = 1;
                             }
                             obj.result = "Enquiry Saved Successfully";
-                                _hub.Clients.All.BroadcastMessage();
-                            }
-                            else
-                            {
-                                obj.result = "Duplicate Entry";
-                            }
+                            _hub.Clients.All.BroadcastMessage();
+                        }
+                        else
+                        {
+                            obj.result = "Duplicate Entry";
+                        }
                     }
                     else
                     {
@@ -853,6 +908,8 @@ namespace Helper.Model
                         _datacontext.TSNQ_ENQUIRY_HDR_ORGTable.Add(objenqheaderorg);
                         _datacontext.SaveChanges();
                         long PKENQHDRORGID = objEnquiry.PK_SNQENQUIRY_HDR_ID;
+
+                        #region
                         TSNQ_ENQUIRY_HDR objenqheader = new TSNQ_ENQUIRY_HDR();
                         objenqheader.FK_PROCESS_ID = 1;
                         objenqheader.FK_INSTANCE_ID = 1;
@@ -894,6 +951,7 @@ namespace Helper.Model
                         objenqheader.MAIL_SUBJECT = objEnquiry.emailSubject;
                         objenqheader.RFQ_URL = objEnquiry.rfqUrl;
                         objenqheader.ERROR_VERIFIED_COUNTER = 0;
+                        objenqheader.IS_ACTIVE = 1;
                         if (objEnquiry.sourceType.ToUpper() == "MESPAS")
                         {
                             objenqheader.SOURCE_TYPE = objEnquiry.sourceType;
@@ -916,31 +974,29 @@ namespace Helper.Model
                         }
                         _datacontext.TSNQ_ENQUIRY_HDRTable.Add(objenqheader);
                         _datacontext.SaveChanges();
+                        #endregion
+
                         long PKENQHDRID = objenqheader.PK_SNQENQUIRY_HDR_ID;
                         //save multiple header levels document path
                         if (objEnquiry.docHdrDetails != null && PKENQHDRID != 0)
                         {
                             foreach (var item in objEnquiry.docHdrDetails)
                             {
-                                // if (item.docPath != "")
+                                T_SNQ_DOCUMENT_HDR objenqdetails = new T_SNQ_DOCUMENT_HDR();
                                 {
-                                    T_SNQ_DOCUMENT_HDR objenqdetails = new T_SNQ_DOCUMENT_HDR();
-                                    {
-                                        objenqdetails.ENQUIRY_HDR_ID = PKENQHDRID;
-                                        objenqdetails.DOC_PATH = item.docPath;
-                                        objenqdetails.ERROR_DESCRIPTION = item.errorDescription;
-                                        objenqdetails.CREATEBY = 1;
-                                        objenqdetails.CREATEDAT = DateTime.Now;
-                                        objenqdetails.ISACTIVE = 1;
-                                    };
-                                    _datacontext.T_SNQ_DOCUMENT_HDRTable.Add(objenqdetails);
-                                    _datacontext.SaveChanges();
-                                }
+                                    objenqdetails.ENQUIRY_HDR_ID = PKENQHDRID;
+                                    objenqdetails.DOC_PATH = item.docPath;
+                                    objenqdetails.ERROR_DESCRIPTION = item.errorDescription;
+                                    objenqdetails.CREATEBY = 1;
+                                    objenqdetails.CREATEDAT = DateTime.Now;
+                                    objenqdetails.ISACTIVE = 1;
+                                };
+                                _datacontext.T_SNQ_DOCUMENT_HDRTable.Add(objenqdetails);
+                                _datacontext.SaveChanges();
                             }
                         }
                         if (objEnquiry.itemDetails != null && PKENQHDRID != 0)
                         {
-                            int count = 0;
                             foreach (var item in objEnquiry.itemDetails)
                             {
                                 TSNQ_ENQUIRY_DTL_ORG objenqdetailsorg = new TSNQ_ENQUIRY_DTL_ORG();
@@ -1080,7 +1136,7 @@ namespace Helper.Model
                                         objenqdetails.STATUS = 5;
                                         objenqdetails.SEQ_NO = Convert.ToInt32(item.seqNo);
                                         objenqdetails.ERROR_CODE = item.errorCode;
-                                        objenqdetails.ACCOUNT_NO = GetAccountCodeMapping(item.accountNo, item.accountDescription, objEnquiry.owner);
+                                        objenqdetails.ACCOUNT_NO = GetAccountCodeMapping(item.accountNo, item.accountDescription, objEnquiry.owner ,objEnquiry.enqrefNo);
                                         // objenqdetails.ACCOUNT_NO = GetAccountCodeMapping(partCode, objEnquiry.mailSubject, item.accountDescription) ;
                                         objenqdetails.ACCOUNT_DESCRIPTION = item.accountDescription;
                                         objenqdetails.IS_UPDATED_WITH_ML = isUpdatedWithML;
@@ -1257,6 +1313,7 @@ namespace Helper.Model
                                 objdtl.SEQ_NO = Convert.ToInt32(item.seqNo);
                                 objdtl.ERROR_CODE = item.errorCode;
                                 objdtl.ACCOUNT_NO = item.accountNo;
+
                                 objdtl.ACCOUNT_DESCRIPTION = item.accountDescription;
                                 objdtl.SEQ_NOTEXT = item.seqNoText;
                                 _datacontext.SaveChanges();
@@ -1283,6 +1340,7 @@ namespace Helper.Model
                                     objenqdetails.SEQ_NO = Convert.ToInt32(item.seqNo);
                                     objenqdetails.ERROR_CODE = item.errorCode;
                                     objenqdetails.ACCOUNT_NO = item.accountNo;
+
                                     objenqdetails.ACCOUNT_DESCRIPTION = item.accountDescription;
                                     objenqdetails.IS_UPDATED_WITH_ML = 0;
                                     objenqdetails.SEQ_NOTEXT = item.seqNoText;
@@ -1350,7 +1408,6 @@ namespace Helper.Model
                     headerobj.PORT = objEnquiry.port;
                     headerobj.AS400_MAPPING_PORT = objEnquiry.mappingPort;//GetPortMapping("", objEnquiry.port);
                     headerobj.DELIVERY_DATE = objEnquiry.deliveryDate;
-                    // headerobj.OWNERSHIP = 0;
                     if (headerobj.STATUS == 1 && objEnquiry.saveAsDraft == "saveInVerification")  //not started
                     {
                         headerobj.STATUS = 1; //Verified
@@ -1668,7 +1725,7 @@ namespace Helper.Model
             List<Enquiryheader1> lstEnqHdrdtls = new List<Enquiryheader1>();
             string as400Port = "";
             var HdrData = (from hdr in _datacontext.TSNQ_ENQUIRY_HDRTable
-                           where (hdr.STATUS == 2 || hdr.STATUS == 6)
+                           where ((hdr.STATUS == 2 || hdr.STATUS == 6) && hdr.IS_ACTIVE == 1)
                            select hdr).OrderBy(c => c.STATUS).OrderByDescending(c => c.AS400_MAPPING_PORT).ToList();
             //Get all Verified and updated enquiries for  Yokohama ,kobe port .and take 1st five enquiry of same port
             if (HdrData.Count > 0)
@@ -1836,14 +1893,13 @@ namespace Helper.Model
         public List<Enquiryheaderdata> GetTaskList(searchdata objsearchdata)
         {
             List<Enquiryheaderdata> lstEnqheader = new List<Enquiryheaderdata>();
-            if (objsearchdata.FromDate != "")// && objsearchdata.ToDate != "" && objsearchdata.sourceType != ""
+            if (objsearchdata.FromDate != "")
             {
                 var Tasklist = (from enqheader in _datacontext.TSNQ_ENQUIRY_HDRTable
                                 join statusmst in _datacontext.M_STATUS_CODE on enqheader.STATUS equals statusmst.STATUS_CODE
                                 join usrmst in _datacontext.MstUserTable on enqheader.OWNERSHIP equals usrmst.PK_USER_ID into usmt
                                 from userm in usmt.DefaultIfEmpty()
-                                where enqheader.STATUS == (int)notstartedStatus
-                                // 1)
+                                where enqheader.STATUS == (int)notstartedStatus && enqheader.IS_ACTIVE == 1
                                 select new
                                 {
                                     enqheader.PK_SNQENQUIRY_HDR_ID,
@@ -1904,6 +1960,38 @@ namespace Helper.Model
                     objEnqheadr.TotalNoOfItems = item.DETAIL_COUNT;
                     objEnqheadr.sourceType = item.SOURCE_TYPE;
                     objEnqheadr.createdDate = item.CREATED_DATE.ToString();
+
+                    var itemlist = (from enqheader in _datacontext.TSNQ_ENQUIRY_DTLTable
+                                    where enqheader.FK_SNQENQUIRY_HDR_ID == item.PK_SNQENQUIRY_HDR_ID
+                                    select new
+                                    {
+                                        enqheader.ACCOUNT_NO
+                                    }).ToList();
+                    if (itemlist != null)
+                    {
+                        var uniq = itemlist.GroupBy(x => new { x.ACCOUNT_NO }).Select(y => y.First()).Distinct().ToList();
+                        if (uniq.Count() > 0)
+                        {
+                            if (uniq.Count() == 1)
+                            {
+                                foreach (var item1 in uniq)
+                                {
+                                    objEnqheadr.accountNo = item1.ACCOUNT_NO;
+                                }
+                            }
+                            else
+                            {
+                                foreach (var item1 in uniq)
+                                {
+                                    string accNo = item1.ACCOUNT_NO;
+                                    string updatedAcc = accNo;
+                                    string latestacc = objEnqheadr.accountNo + "," + updatedAcc;
+                                    objEnqheadr.accountNo = latestacc.TrimStart(',');
+                                }
+                            }
+                        }
+                    }
+
                     if (item.OWNERSHIP != 0)
                     {
                         objEnqheadr.action = "YES";
@@ -1925,7 +2013,7 @@ namespace Helper.Model
                                 join statusmst in _datacontext.M_STATUS_CODE on enqheader.STATUS equals statusmst.STATUS_CODE
                                 join usrmst in _datacontext.MstUserTable on enqheader.OWNERSHIP equals usrmst.PK_USER_ID into usmt
                                 from userm in usmt.DefaultIfEmpty()
-                                where enqheader.STATUS == (int)notstartedStatus
+                                where enqheader.STATUS == (int)notstartedStatus && enqheader.IS_ACTIVE == 1
                                 select new
                                 {
                                     enqheader.PK_SNQENQUIRY_HDR_ID,
@@ -1953,7 +2041,7 @@ namespace Helper.Model
                     string[] dt = item.ENQUIRY_DATE.Split(" ");
                     Enquiryheaderdata objEnqheadr = new Enquiryheaderdata();
                     objEnqheadr.PK_SNQENQUIRY_HDR_ID = item.PK_SNQENQUIRY_HDR_ID;
-                    objEnqheadr.enquiryDate = dt[0];//data.ENQUIRY_DATE;
+                    objEnqheadr.enquiryDate = dt[0];
                     objEnqheadr.enqrefNo = item.ENQREF_NO;
                     objEnqheadr.shipName = item.SHIP_NAME;
                     objEnqheadr.owner = item.OWNER;
@@ -1963,6 +2051,37 @@ namespace Helper.Model
                     objEnqheadr.TotalNoOfItems = item.DETAIL_COUNT;
                     objEnqheadr.sourceType = item.SOURCE_TYPE;
                     objEnqheadr.createdDate = item.CREATED_DATE.ToString();
+
+                    var itemlist = (from enqheader in _datacontext.TSNQ_ENQUIRY_DTLTable
+                                    where enqheader.FK_SNQENQUIRY_HDR_ID == item.PK_SNQENQUIRY_HDR_ID
+                                    select new
+                                    {
+                                        enqheader.ACCOUNT_NO
+                                    }).ToList();
+                    if (itemlist != null)
+                    {
+                        var uniq = itemlist.GroupBy(x => new { x.ACCOUNT_NO }).Select(y => y.First()).Distinct().ToList();
+                        if (uniq.Count() > 0)
+                        {
+                            if (uniq.Count() == 1)
+                            {
+                                foreach (var item1 in uniq)
+                                {
+                                    objEnqheadr.accountNo = item1.ACCOUNT_NO;
+                                }
+                            }
+                            else
+                            {
+                                foreach (var item1 in uniq)
+                                {
+                                    string accNo = item1.ACCOUNT_NO;
+                                    string updatedAcc = accNo;
+                                    string latestacc = objEnqheadr.accountNo + "," + updatedAcc;
+                                    objEnqheadr.accountNo = latestacc.TrimStart(',');
+                                }
+                            }
+                        }
+                    }
                     if (item.OWNERSHIP != 0)
                     {
                         objEnqheadr.action = "YES";
@@ -1983,13 +2102,13 @@ namespace Helper.Model
         public List<Enquiryheaderdata> GetErrorTaskList(searchdata objsearchdata)
         {
             List<Enquiryheaderdata> lstEnqheader = new List<Enquiryheaderdata>();
-            if (objsearchdata.FromDate != "")// && objsearchdata.ToDate != "")
+            if (objsearchdata.FromDate != "")
             {
                 var Tasklist = (from enqheader in _datacontext.TSNQ_ENQUIRY_HDRTable
                                 join statusmst in _datacontext.M_STATUS_CODE on enqheader.STATUS equals statusmst.STATUS_CODE
                                 join usrmst in _datacontext.MstUserTable on enqheader.OWNERSHIP equals usrmst.PK_USER_ID into usmt
                                 from userm in usmt.DefaultIfEmpty()
-                                where enqheader.STATUS == (int)errorStatus
+                                where enqheader.STATUS == (int)errorStatus && enqheader.IS_ACTIVE == 1
                                 select new
                                 {
                                     enqheader.PK_SNQENQUIRY_HDR_ID,
@@ -2054,6 +2173,36 @@ namespace Helper.Model
                     objEnqheadr.TotalNoOfItems = item.DETAIL_COUNT;
                     objEnqheadr.sourceType = item.SOURCE_TYPE;
                     objEnqheadr.createdDate = item.CREATED_DATE.ToString();
+                    var itemlist = (from enqheader in _datacontext.TSNQ_ENQUIRY_DTLTable
+                                    where enqheader.FK_SNQENQUIRY_HDR_ID == item.PK_SNQENQUIRY_HDR_ID
+                                    select new
+                                    {
+                                        enqheader.ACCOUNT_NO
+                                    }).ToList();
+                    if (itemlist != null)
+                    {
+                        var uniq = itemlist.GroupBy(x => new { x.ACCOUNT_NO }).Select(y => y.First()).Distinct().ToList();
+                        if (uniq.Count() > 0)
+                        {
+                            if (uniq.Count() == 1)
+                            {
+                                foreach (var item1 in uniq)
+                                {
+                                    objEnqheadr.accountNo = item1.ACCOUNT_NO;
+                                }
+                            }
+                            else
+                            {
+                                foreach (var item1 in uniq)
+                                {
+                                    string accNo = item1.ACCOUNT_NO;
+                                    string updatedAcc = accNo;
+                                    string latestacc = objEnqheadr.accountNo + "," + updatedAcc;
+                                    objEnqheadr.accountNo = latestacc.TrimStart(',');
+                                }
+                            }
+                        }
+                    }
                     if (item.OWNERSHIP != 0)
                     {
                         objEnqheadr.action = "YES";
@@ -2075,7 +2224,7 @@ namespace Helper.Model
                                 join statusmst in _datacontext.M_STATUS_CODE on enqheader.STATUS equals statusmst.STATUS_CODE
                                 join usrmst in _datacontext.MstUserTable on enqheader.OWNERSHIP equals usrmst.PK_USER_ID into usmt
                                 from userm in usmt.DefaultIfEmpty()
-                                where enqheader.STATUS == (int)errorStatus
+                                where enqheader.STATUS == (int)errorStatus && enqheader.IS_ACTIVE == 1
                                 select new
                                 {
                                     enqheader.PK_SNQENQUIRY_HDR_ID,
@@ -2121,6 +2270,36 @@ namespace Helper.Model
                     objEnqheadr.TotalNoOfItems = item.DETAIL_COUNT;
                     objEnqheadr.sourceType = item.SOURCE_TYPE;
                     objEnqheadr.createdDate = item.CREATED_DATE.ToString();
+                    var itemlist = (from enqheader in _datacontext.TSNQ_ENQUIRY_DTLTable
+                                    where enqheader.FK_SNQENQUIRY_HDR_ID == item.PK_SNQENQUIRY_HDR_ID
+                                    select new
+                                    {
+                                        enqheader.ACCOUNT_NO
+                                    }).ToList();
+                    if (itemlist != null)
+                    {
+                        var uniq = itemlist.GroupBy(x => new { x.ACCOUNT_NO }).Select(y => y.First()).Distinct().ToList();
+                        if (uniq.Count() > 0)
+                        {
+                            if (uniq.Count() == 1)
+                            {
+                                foreach (var item1 in uniq)
+                                {
+                                    objEnqheadr.accountNo = item1.ACCOUNT_NO;
+                                }
+                            }
+                            else
+                            {
+                                foreach (var item1 in uniq)
+                                {
+                                    string accNo = item1.ACCOUNT_NO;
+                                    string updatedAcc = accNo;
+                                    string latestacc = objEnqheadr.accountNo + "," + updatedAcc;
+                                    objEnqheadr.accountNo = latestacc.TrimStart(',');
+                                }
+                            }
+                        }
+                    }
                     if (item.OWNERSHIP != 0)
                     {
                         objEnqheadr.action = "YES";
@@ -2141,13 +2320,13 @@ namespace Helper.Model
         public List<Enquiryheaderdata> GetCompletedTaskList(searchdata objsearchdata)
         {
             List<Enquiryheaderdata> lstEnqheader = new List<Enquiryheaderdata>();
-            if (objsearchdata.FromDate != "")// && objsearchdata.ToDate != "")
+            if (objsearchdata.FromDate != "")
             {
                 var Tasklist = (from enqheader in _datacontext.TSNQ_ENQUIRY_HDRTable
                                 join statusmst in _datacontext.M_STATUS_CODE on enqheader.STATUS equals statusmst.STATUS_CODE
                                 join usrmst in _datacontext.MstUserTable on enqheader.OWNERSHIP equals usrmst.PK_USER_ID into usmt
                                 from userm in usmt.DefaultIfEmpty()
-                                where enqheader.STATUS == (int)successStatus
+                                where enqheader.STATUS == (int)successStatus && enqheader.IS_ACTIVE == 1
                                 select new
                                 {
                                     enqheader.PK_SNQENQUIRY_HDR_ID,
@@ -2211,6 +2390,36 @@ namespace Helper.Model
                     objEnqheadr.TotalNoOfItems = item.DETAIL_COUNT;
                     objEnqheadr.sourceType = item.SOURCE_TYPE;
                     objEnqheadr.createdDate = item.CREATED_DATE.ToString();
+                    var itemlist = (from enqheader in _datacontext.TSNQ_ENQUIRY_DTLTable
+                                    where enqheader.FK_SNQENQUIRY_HDR_ID == item.PK_SNQENQUIRY_HDR_ID
+                                    select new
+                                    {
+                                        enqheader.ACCOUNT_NO
+                                    }).ToList();
+                    if (itemlist != null)
+                    {
+                        var uniq = itemlist.GroupBy(x => new { x.ACCOUNT_NO }).Select(y => y.First()).Distinct().ToList();
+                        if (uniq.Count() > 0)
+                        {
+                            if (uniq.Count() == 1)
+                            {
+                                foreach (var item1 in uniq)
+                                {
+                                    objEnqheadr.accountNo = item1.ACCOUNT_NO;
+                                }
+                            }
+                            else
+                            {
+                                foreach (var item1 in uniq)
+                                {
+                                    string accNo = item1.ACCOUNT_NO;
+                                    string updatedAcc = accNo;
+                                    string latestacc = objEnqheadr.accountNo + "," + updatedAcc;
+                                    objEnqheadr.accountNo = latestacc.TrimStart(',');
+                                }
+                            }
+                        }
+                    }
                     if (item.OWNERSHIP != 0)
                     {
                         objEnqheadr.action = "YES";
@@ -2232,7 +2441,7 @@ namespace Helper.Model
                                 join statusmst in _datacontext.M_STATUS_CODE on enqheader.STATUS equals statusmst.STATUS_CODE
                                 join usrmst in _datacontext.MstUserTable on enqheader.OWNERSHIP equals usrmst.PK_USER_ID into usmt
                                 from userm in usmt.DefaultIfEmpty()
-                                where enqheader.STATUS == (int)successStatus
+                                where enqheader.STATUS == (int)successStatus && enqheader.IS_ACTIVE == 1
                                 select new
                                 {
                                     enqheader.PK_SNQENQUIRY_HDR_ID,
@@ -2277,6 +2486,36 @@ namespace Helper.Model
                     objEnqheadr.TotalNoOfItems = item.DETAIL_COUNT;
                     objEnqheadr.sourceType = item.SOURCE_TYPE;
                     objEnqheadr.createdDate = item.CREATED_DATE.ToString();
+                    var itemlist = (from enqheader in _datacontext.TSNQ_ENQUIRY_DTLTable
+                                    where enqheader.FK_SNQENQUIRY_HDR_ID == item.PK_SNQENQUIRY_HDR_ID
+                                    select new
+                                    {
+                                        enqheader.ACCOUNT_NO
+                                    }).ToList();
+                    if (itemlist != null)
+                    {
+                        var uniq = itemlist.GroupBy(x => new { x.ACCOUNT_NO }).Select(y => y.First()).Distinct().ToList();
+                        if (uniq.Count() > 0)
+                        {
+                            if (uniq.Count() == 1)
+                            {
+                                foreach (var item1 in uniq)
+                                {
+                                    objEnqheadr.accountNo = item1.ACCOUNT_NO;
+                                }
+                            }
+                            else
+                            {
+                                foreach (var item1 in uniq)
+                                {
+                                    string accNo = item1.ACCOUNT_NO;
+                                    string updatedAcc = accNo;
+                                    string latestacc = objEnqheadr.accountNo + "," + updatedAcc;
+                                    objEnqheadr.accountNo = latestacc.TrimStart(',');
+                                }
+                            }
+                        }
+                    }
                     if (item.OWNERSHIP != 0)
                     {
                         objEnqheadr.action = "YES";
@@ -2293,6 +2532,310 @@ namespace Helper.Model
                 return lstEnqheader.OrderByDescending(x => x.PK_SNQENQUIRY_HDR_ID).ToList();
             }
         }
+        /*New snq request*/
+        public List<Enquiryheaderdata> GetTaskListForShipName(shipSearchdata objsearchdata)
+        {
+            List<Enquiryheaderdata> lstEnqheader = new List<Enquiryheaderdata>();
+            if (objsearchdata.CustNameShipNameRefNo != "")
+            {
+                var Tasklist = (from enqheader in _datacontext.TSNQ_ENQUIRY_HDRTable
+                                join statusmst in _datacontext.M_STATUS_CODE on enqheader.STATUS equals statusmst.STATUS_CODE
+                                where enqheader.STATUS == (int)notstartedStatus && enqheader.IS_ACTIVE == 1
+                                select new
+                                {
+                                    enqheader.PK_SNQENQUIRY_HDR_ID,
+                                    enquirydt = enqheader.ENQUIRY_DATE == null ? "" : enqheader.ENQUIRY_DATE,
+                                    enqheader.ENQREF_NO,
+                                    enqheader.SHIP_NAME,
+                                    enqheader.OWNER,
+                                    statusmst.STATUS_DESCRIPTION,
+                                    enqheader.CREATED_DATE,
+                                    enqheader.OWNERSHIP,
+                                    enqheader.SAVE_AS_DRAFT,
+                                    enqheader.SOURCE_TYPE,
+                                    DETAIL_COUNT = _datacontext.TSNQ_ENQUIRY_DTLTable.Count(t => t.FK_SNQENQUIRY_HDR_ID == enqheader.PK_SNQENQUIRY_HDR_ID),
+                                    DETAIL_ERROR_COUNT = _datacontext.TSNQ_ENQUIRY_DTLTable.Where(x => x.STATUS == 5).Count(t => t.FK_SNQENQUIRY_HDR_ID == enqheader.PK_SNQENQUIRY_HDR_ID),
+                                });
+                if (objsearchdata.CustNameShipNameRefNo != "")
+                {
+                    Tasklist = Tasklist.Where(x => x.SHIP_NAME.Trim().ToUpper() == objsearchdata.CustNameShipNameRefNo.Trim().ToUpper());
+                }
+                var objdata = Tasklist.ToList();
+                foreach (var item in Tasklist)
+                {
+                    string[] dt = item.enquirydt.Split(" ");
+                    Enquiryheaderdata objEnqheadr = new Enquiryheaderdata();
+                    objEnqheadr.PK_SNQENQUIRY_HDR_ID = item.PK_SNQENQUIRY_HDR_ID;
+                    objEnqheadr.enquiryDate = dt[0];
+                    objEnqheadr.enqrefNo = item.ENQREF_NO;
+                    objEnqheadr.shipName = item.SHIP_NAME;
+                    objEnqheadr.owner = item.OWNER;
+                    objEnqheadr.status = item.STATUS_DESCRIPTION;
+                    objEnqheadr.saveAsDraft = item.SAVE_AS_DRAFT;
+                    objEnqheadr.TotalNoOfErrorItems = item.DETAIL_ERROR_COUNT;
+                    objEnqheadr.TotalNoOfItems = item.DETAIL_COUNT;
+                    objEnqheadr.sourceType = item.SOURCE_TYPE;
+                    objEnqheadr.isSelected = false;
+                    objEnqheadr.createdDate = item.CREATED_DATE.ToString();
+
+                    var itemlist = (from enqheader in _datacontext.TSNQ_ENQUIRY_DTLTable
+                                    where enqheader.FK_SNQENQUIRY_HDR_ID == item.PK_SNQENQUIRY_HDR_ID
+                                    select new
+                                    {
+                                        enqheader.ACCOUNT_NO
+                                    }).ToList();
+                    if (itemlist != null)
+                    {
+                        var uniq = itemlist.GroupBy(x => new { x.ACCOUNT_NO }).Select(y => y.First()).Distinct().ToList();
+                        if (uniq.Count() > 0)
+                        {
+                            if (uniq.Count() == 1)
+                            {
+                                foreach (var item1 in uniq)
+                                {
+                                    objEnqheadr.accountNo = item1.ACCOUNT_NO;
+                                }
+                            }
+                            else
+                            {
+                                foreach (var item1 in uniq)
+                                {
+                                    string accNo = item1.ACCOUNT_NO;
+                                    string updatedAcc = accNo;
+                                    string latestacc = objEnqheadr.accountNo + "," + updatedAcc;
+                                    objEnqheadr.accountNo = latestacc.TrimStart(',');
+                                }
+                            }
+                        }
+                    }
+                    lstEnqheader.Add(objEnqheadr);
+                }
+                return lstEnqheader;//.OrderByDescending(x => x.PK_SNQENQUIRY_HDR_ID).ToList();
+            }
+            else
+            {
+                var Tasklist = (from enqheader in _datacontext.TSNQ_ENQUIRY_HDRTable
+                                join statusmst in _datacontext.M_STATUS_CODE on enqheader.STATUS equals statusmst.STATUS_CODE
+                                where enqheader.STATUS == (int)notstartedStatus && enqheader.IS_ACTIVE == 1
+                                select new
+                                {
+                                    enqheader.PK_SNQENQUIRY_HDR_ID,
+                                    enqheader.ENQUIRY_DATE,
+                                    enqheader.ENQREF_NO,
+                                    enqheader.SHIP_NAME,
+                                    enqheader.OWNER,
+                                    statusmst.STATUS_DESCRIPTION,
+                                    enqheader.CREATED_DATE,
+                                    enqheader.OWNERSHIP,
+                                    enqheader.SAVE_AS_DRAFT,
+                                    enqheader.SOURCE_TYPE,
+                                    DETAIL_COUNT = _datacontext.TSNQ_ENQUIRY_DTLTable.Count(t => t.FK_SNQENQUIRY_HDR_ID == enqheader.PK_SNQENQUIRY_HDR_ID),
+                                    DETAIL_ERROR_COUNT = _datacontext.TSNQ_ENQUIRY_DTLTable.Where(x => x.STATUS == 5).Count(t => t.FK_SNQENQUIRY_HDR_ID == enqheader.PK_SNQENQUIRY_HDR_ID),
+                                });
+                var objdata = Tasklist.ToList();
+                foreach (var item in Tasklist)
+                {
+                    string[] dt = item.ENQUIRY_DATE.Split(" ");
+                    Enquiryheaderdata objEnqheadr = new Enquiryheaderdata();
+                    objEnqheadr.PK_SNQENQUIRY_HDR_ID = item.PK_SNQENQUIRY_HDR_ID;
+                    objEnqheadr.enquiryDate = dt[0];//data.ENQUIRY_DATE;
+                    objEnqheadr.enqrefNo = item.ENQREF_NO;
+                    objEnqheadr.shipName = item.SHIP_NAME;
+                    objEnqheadr.owner = item.OWNER;
+                    objEnqheadr.status = item.STATUS_DESCRIPTION;
+                    objEnqheadr.saveAsDraft = item.SAVE_AS_DRAFT;
+                    objEnqheadr.TotalNoOfErrorItems = item.DETAIL_ERROR_COUNT;
+                    objEnqheadr.TotalNoOfItems = item.DETAIL_COUNT;
+                    objEnqheadr.sourceType = item.SOURCE_TYPE;
+                    objEnqheadr.createdDate = item.CREATED_DATE.ToString();
+                    objEnqheadr.isSelected = false;
+                    var itemlist = (from enqheader in _datacontext.TSNQ_ENQUIRY_DTLTable
+                                    where enqheader.FK_SNQENQUIRY_HDR_ID == item.PK_SNQENQUIRY_HDR_ID
+                                    select new
+                                    {
+                                        enqheader.ACCOUNT_NO
+                                    }).ToList();
+                    if (itemlist != null)
+                    {
+                        var uniq = itemlist.GroupBy(x => new { x.ACCOUNT_NO }).Select(y => y.First()).Distinct().ToList();
+                        if (uniq.Count() > 0)
+                        {
+                            if (uniq.Count() == 1)
+                            {
+                                foreach (var item1 in uniq)
+                                {
+                                    objEnqheadr.accountNo = item1.ACCOUNT_NO;
+                                }
+                            }
+                            else
+                            {
+                                foreach (var item1 in uniq)
+                                {
+                                    string accNo = item1.ACCOUNT_NO;
+                                    string updatedAcc = accNo;
+                                    string latestacc = objEnqheadr.accountNo + "," + updatedAcc;
+                                    objEnqheadr.accountNo = latestacc.TrimStart(',');
+                                }
+                            }
+                        }
+                    }
+                    lstEnqheader.Add(objEnqheadr);
+                }
+                return lstEnqheader;//.OrderByDescending(x => x.PK_SNQENQUIRY_HDR_ID).ToList();
+            }
+        }
+
+        public MessageSNQ UpdateRFQByShipName(List<Enquiryheaderdata> lstenquhdrdata)
+        {
+            MessageSNQ objResult = new MessageSNQ();
+            objResult.result = "Error while update data for same ship name";
+            if (lstenquhdrdata.Count != 1)
+            {
+                if (lstenquhdrdata.Count > 0)
+                {
+                    
+                    var jArrayString = JsonConvert.SerializeObject(lstenquhdrdata);
+
+                    var jArray = JArray.Parse(jArrayString);
+
+                    bool allSame = jArray.All(j => j["shipName"].ToObject<string>() == jArray[0]["shipName"].ToObject<string>() && j["owner"].ToObject<string>() == jArray[0]["owner"].ToObject<string>());
+
+                    Console.WriteLine("allSame: " + allSame);
+
+                    if (allSame)
+                    {
+                        bool allStringsHaveLength2 = lstenquhdrdata.All(s => (!string.IsNullOrEmpty(s.accountNo)) && s.accountNo.Length != 3);
+                        /* Single shipname data update*/
+                        if (allStringsHaveLength2)
+                        {
+                            TSNQ_ENQUIRY_HDR headerobj = (from hdr1 in _datacontext.TSNQ_ENQUIRY_HDRTable where hdr1.PK_SNQENQUIRY_HDR_ID == lstenquhdrdata[0].PK_SNQENQUIRY_HDR_ID select hdr1).FirstOrDefault();
+                            if (headerobj != null)
+                            {
+                                headerobj.STATUS = 2;
+                                headerobj.COMMON_STATUS = "Merge";
+
+                                _datacontext.SaveChanges();
+
+
+                                #region
+                                var upitemlist = (from enqheader in _datacontext.TSNQ_ENQUIRY_DTLTable
+                                                  where enqheader.FK_SNQENQUIRY_HDR_ID == headerobj.PK_SNQENQUIRY_HDR_ID
+                                                  select new
+                                                  {
+                                                      enqheader.PK_SNQENQUIRY_DTL_ID
+                                                  }).ToList();
+                                if (upitemlist.Count > 0)
+                                {
+                                    foreach (var item1 in upitemlist)
+                                    {
+                                        TSNQ_ENQUIRY_DTL dtlobj1 = (from hdr2 in _datacontext.TSNQ_ENQUIRY_DTLTable
+                                                                    where hdr2.PK_SNQENQUIRY_DTL_ID == item1.PK_SNQENQUIRY_DTL_ID
+                                                                    select hdr2).ToList().FirstOrDefault();
+                                        if (dtlobj1 != null)
+                                        {
+                                            dtlobj1.STATUS = 2;
+                                            if (lstenquhdrdata[0].accountNo.Length == 2)
+                                            {
+                                                dtlobj1.ACCOUNT_NO = lstenquhdrdata[0].accountNo;
+                                            }
+                                            dtlobj1.COMMON_STATUS = "Merge";
+                                        }
+                                        _datacontext.SaveChanges();
+                                    }
+                                }
+                                #endregion
+
+                            }
+                            /*Completed single ship name data update */
+                            /* Multiple ship name data update */
+                            #region
+                            for (int i = 1; i < lstenquhdrdata.Count(); i++)
+                            {
+                                var headerobj1 = (from hdr2 in _datacontext.TSNQ_ENQUIRY_HDRTable
+                                                  where
+                                                  hdr2.PK_SNQENQUIRY_HDR_ID == lstenquhdrdata[i].PK_SNQENQUIRY_HDR_ID
+                                                  select new
+                                                  {
+                                                      hdr2.PK_SNQENQUIRY_HDR_ID
+                                                  }).ToList();
+                                foreach (var dt in headerobj1)
+                                {
+                                    if (dt.PK_SNQENQUIRY_HDR_ID != lstenquhdrdata[0].PK_SNQENQUIRY_HDR_ID)
+                                    {
+                                        TSNQ_ENQUIRY_HDR snqdtl = (from hdr3 in _datacontext.TSNQ_ENQUIRY_HDRTable
+                                                                   where hdr3.PK_SNQENQUIRY_HDR_ID == dt.PK_SNQENQUIRY_HDR_ID
+                                                                   select hdr3).ToList().FirstOrDefault();
+                                        if (snqdtl != null)
+                                        {
+                                            snqdtl.STATUS = 2;
+                                            snqdtl.COMMON_STATUS = "Merge";
+                                            snqdtl.IS_ACTIVE = 0;
+
+                                            _datacontext.SaveChanges();
+
+                                            #region //&& (enqheader.FK_SNQENQUIRY_HDR_ID != lstenquhdrdata[0].PK_SNQENQUIRY_HDR_ID
+                                            var upitemlist1 = (from enqheader in _datacontext.TSNQ_ENQUIRY_DTLTable
+                                                               where
+                                                               enqheader.FK_SNQENQUIRY_HDR_ID == dt.PK_SNQENQUIRY_HDR_ID
+                                                               select new
+                                                               {
+                                                                   enqheader.PK_SNQENQUIRY_DTL_ID
+                                                               }).ToList();
+                                            if (upitemlist1.Count > 0)
+                                            {
+                                                foreach (var item1 in upitemlist1)
+                                                {
+                                                    TSNQ_ENQUIRY_DTL dtlobj2 = (from hdr3 in _datacontext.TSNQ_ENQUIRY_DTLTable
+                                                                                where hdr3.PK_SNQENQUIRY_DTL_ID == item1.PK_SNQENQUIRY_DTL_ID
+                                                                                select hdr3).ToList().FirstOrDefault();
+                                                    if (dtlobj2 != null)
+                                                    {
+                                                        dtlobj2.STATUS = 2;
+                                                        dtlobj2.FK_SNQENQUIRY_HDR_ID = lstenquhdrdata[0].PK_SNQENQUIRY_HDR_ID;
+                                                        if (lstenquhdrdata[i].accountNo.Length == 2)
+                                                        {
+                                                            dtlobj2.ACCOUNT_NO = lstenquhdrdata[i].accountNo;
+                                                        }
+
+                                                        dtlobj2.COMMON_STATUS = "Merge";
+                                                    }
+                                                    _datacontext.SaveChanges();
+
+                                                }
+                                            }
+                                            #endregion
+                                        }
+                                    }
+                                    #endregion
+
+                                }
+                            }
+                            /* Multiple ship name data update */
+
+                            objResult.result = "Verified data";
+                        }
+                        else
+                        {
+                            objResult.result = "Plese Select Valid Account Number";
+                        }
+                    }
+                    else
+                    {
+                        objResult.result = "Please select the Same ship and customer data";
+                    } 
+                }
+                else
+                {
+                    objResult.result = "Data not found for that ships";
+                }
+            }
+            else
+            {
+                objResult.result = "Please Select At least two ships data";
+            }
+            return objResult;
+        }
+        /* Completed new snq request points */
         public MessageSNQ Updateownership(EnqOwnership objOwnershipdtls)
         {
             Enquirydetailsdata EnqDetails = new Enquirydetailsdata();
@@ -2890,7 +3433,7 @@ namespace Helper.Model
             //end AccountCode mapping
         }
         //done by pooja
-        public string GetAccountCodeMapping(string accountCode, string accountDescription, string ownerName)
+        public string GetAccountCodeMapping(string accountCode, string accountDescription, string ownerName , string enqNo)
         {
             //AccountCode mapping
             #region AccountCode
@@ -2898,17 +3441,71 @@ namespace Helper.Model
             string ReadAccountcode = this._Configuration.GetSection("DefaultAccountCode")["AccountCode"];
             string OtherAccountCode = this._Configuration.GetSection("DefaultAccountCode")["OtherAccountCode"];
             string ownerNm = this._Configuration.GetSection("DefaultAccountCode")["ownerNm"];
-            if (string.IsNullOrEmpty(accountCode) && ownerName == ownerNm)
+            if (string.IsNullOrEmpty(accountCode))
             {
-                AccountCode = OtherAccountCode;
-            }
-            else if (!string.IsNullOrEmpty(accountCode))
-            {
-                AccountCode = accountCode;
+                /*
+                #region
+                var query1 = (from dtl in _datacontext.TSNQ_ENQUIRY_DTLTable
+                              join hdr in _datacontext.TSNQ_ENQUIRY_HDRTable on dtl.FK_SNQENQUIRY_HDR_ID equals hdr.PK_SNQENQUIRY_HDR_ID
+                              where (hdr.OWNER.ToUpper() == ownerName.ToUpper() && hdr.ENQREF_NO == enqNo)// && hdr.DELIVERY_DATE.Value.ToString("dd-MM-yyyy") == dt.ToString("dd-MM-yyyy"))
+                              select new
+                              {
+                                  dtl.ACCOUNT_NO,
+                                  hdr.DELIVERY_DATE
+                              }).ToList();//.Where(x => x.DELIVERY_DATE.Value.ToString("dd-MM-yyyy") == dt.ToString("dd-MM-yyyy"));
+                string combinedString = string.Join(",", query1);
+                string[] partNumbers = new string[] { combinedString };
+                string PadNumbers(string input)
+                {
+                    return Regex.Replace(input, "[0-9]+", match => match.Value.PadLeft(10, '0'));
+                }
+                var result = partNumbers.OrderBy(x => PadNumbers(x));
+                string accountcode = "";
+                if (result.First() != "")
+                {
+                    var latestdata = result.ToList();
+                    if (latestdata.Count() > 0)
+                    {
+                        foreach (var i in latestdata)
+                        {
+                            string accoutcode = i.Split(',').Reverse().Take(2).Last();
+                            string splitedaccountcode = accoutcode.Split('=').Last();
+                            accountcode = splitedaccountcode.Trim();
+                        }
+                        if (!String.IsNullOrEmpty(accountcode))
+                        {
+                            if (accountcode != "0Z")
+                            {
+                                AccountCode = accountcode.Trim();
+                                string i = Convert.ToString(AccountCode);
+                                string str = i.Substring(1);
+                                char c1 = Convert.ToChar(str);
+                                c1++;
+                                AccountCode = i.Substring(0, 1) + "" + c1++;
+                            }
+                            else
+                            {
+                                AccountCode = "9A";
+                               // AccountCode = ReadAccountcode;
+                            }
+                        }
+                        else
+                        {
+                            AccountCode = "0A";
+                        }
+                    }
+                }
+                else
+                {
+                    AccountCode = "0A";
+                }
+                #endregion
+                */
+                AccountCode = ReadAccountcode;
             }
             else
             {
-                AccountCode = ReadAccountcode;
+                AccountCode = accountCode;
             }
             if (!string.IsNullOrEmpty(accountDescription))//account code ml from acc_description
             {
@@ -3078,10 +3675,6 @@ namespace Helper.Model
                     }
                 }
             }
-            //if (AccountCode == "")
-            //{
-            //    AccountCode = ReadAccountcode;
-            //}
             return AccountCode;
             #endregion AccountCode
             //end AccountCode mapping

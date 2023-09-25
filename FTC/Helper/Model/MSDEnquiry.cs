@@ -17,6 +17,7 @@ using System.Diagnostics;
 using OfficeOpenXml.FormulaParsing.Excel.Functions.DateTime;
 using Helper.Enum;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 
 namespace Helper.Model
 {
@@ -503,9 +504,9 @@ namespace Helper.Model
             return lstEnqhdrDetails;
         }
         //From Email Bot
-        public MessageMSD InsertEnquiry(Enquiryheader objEnquirydtls)
+        public MessageWithRFQData InsertEnquiry(Enquiryheader objEnquirydtls)
         {
-            MessageMSD obj = new MessageMSD();
+            MessageWithRFQData obj = new MessageWithRFQData();
             obj.result = "Error while Creating Enquiry";
             int isUpdatedWithML = 0;
             string isDuplicteEntry = "NO";
@@ -515,6 +516,7 @@ namespace Helper.Model
             string MakerBlank = this._Configuration.GetSection("MSDMakers")["MakerBlank"];
             string SourceType = this._Configuration.GetSection("SourceType")["SourceTypeName"];
             #endregion
+           
             try
             {
                 if (objEnquirydtls != null)
@@ -942,15 +944,21 @@ namespace Helper.Model
 
                             #endregion
 
-                          
                             obj.result = "Enquiry Saved Successfully";
                             _hub.Clients.All.BroadcastMessage();
 
                         }
                         else
                         {
+                           
                             obj.result = "Duplicate Entry";
-                            if(objEnquirydtls.owner.Trim().ToUpper() == "KUWAIT OIL TANKE*WEB")
+                            if (!String.IsNullOrEmpty(objEnquirydtls.owner))
+                            {
+                                string OWNER = GetCustomerMapping(objEnquirydtls.owner);
+                                obj.ownerEmailId = GetCustomerEmailMapping(OWNER);
+                            }
+
+                            if (objEnquirydtls.owner.Trim().ToUpper() == "KUWAIT OIL TANKE*WEB")
                             {
                                 TMSD_ENQUIRY_HDR objupdatemsd = (from hdr in _datacontext.TMSD_ENQUIRY_HDRTable where hdr.ENQREF_NO == objEnquirydtls.enqrefNo select hdr).FirstOrDefault();
                                 if (objupdatemsd!= null)
@@ -959,6 +967,7 @@ namespace Helper.Model
                                     _datacontext.SaveChanges();
                                 }
                             }
+                            
 
                         }
                     }

@@ -402,6 +402,8 @@ namespace Helper.Data
 
             public string RFQ_URL { get; set; }
             public int ERROR_VERIFIED_COUNTER { get; set; }
+            public string COMMON_STATUS { get; set; }
+            public int IS_ACTIVE { get; set; }
 
         }
 
@@ -429,9 +431,8 @@ namespace Helper.Data
             public int IS_UPDATED_WITH_ML { get; set; }
             public string DISCOUNT_AMOUNT { get; set; }
             public string SEQ_NOTEXT { get; set; }
-
             public int IS_UPDATED_MESPASITEMS_WITH_ML { get; set; }
-
+            public string COMMON_STATUS { get; set; }
 
         }
 

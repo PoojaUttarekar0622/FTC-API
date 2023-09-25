@@ -101,7 +101,7 @@ namespace FTC.Controllers
         {
 
             Enquiryheader objuser = new Enquiryheader();
-            MessageMSD obj = new MessageMSD();
+            MessageWithRFQData obj = new MessageWithRFQData();
             try
             {
 

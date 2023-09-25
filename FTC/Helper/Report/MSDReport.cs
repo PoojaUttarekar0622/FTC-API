@@ -269,7 +269,6 @@ namespace Helper.Report
                
             }
         }
-
         public void Send_Mail(string filepath)
         {
             try

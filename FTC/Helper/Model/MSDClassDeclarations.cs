@@ -313,6 +313,12 @@ namespace Helper.Model
         {
             public string result { get; set; }
         }
+
+        public class MessageWithRFQData
+        {
+            public string result { get; set; }
+            public string ownerEmailId { get; set; }
+        }
         public class MSDRFQData
         {
             public string errorRFQ { get; set; }

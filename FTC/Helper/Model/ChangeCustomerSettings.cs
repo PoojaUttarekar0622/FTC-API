@@ -81,6 +81,7 @@ namespace Helper.Model
         {
             Message obj = new Message();
             obj.result = "Error while updating customer data";
+            Notification notification = new Notification(_Configuration);
             try
             {
                 if (objCustomerData != null)
@@ -103,6 +104,7 @@ namespace Helper.Model
                             _datacontext.SaveChanges();
                         }
                         obj.result = "Data Updated Successfully";
+                        notification.ReadExcel(objCustomerData);
                     }
                     else
                     {

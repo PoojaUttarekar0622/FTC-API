@@ -173,15 +173,12 @@ namespace FTC.Controllers
                 return StatusCode(HttpContext.Response.StatusCode, ex.Message);
             }
         }
-
         [HttpPost]
         [Route("DeleteItem")]
         public async Task<ActionResult> DeleteDtlItem(List<Enquirydetailsdata> endtl)
         {
             List<Enquirydetailsdata> lstEnqDetails = new List<Enquirydetailsdata>();
             MessageSNQ obj = new MessageSNQ();
-
-            
             try
             {
                 if (User.Identity.IsAuthenticated)
@@ -213,13 +210,11 @@ namespace FTC.Controllers
             }
         }
 
-
         //Update Enquiry From AS400 Bot
         [HttpPost]
         [Route("UpdateStatus")]
         public async Task<ActionResult> UpdateEnquiryStatus([FromBody] Enquiryheader inobjuserMaster)
         {
-            
             Enquiryheader objuser = new Enquiryheader();
             MessageSNQ obj = new MessageSNQ();
             try
@@ -257,12 +252,9 @@ namespace FTC.Controllers
         [Route("GetDataForAS400")]
         public async Task<ActionResult> GetDataForAS400()
         {
-
             List<Enquiryheader1> lstEnqHeader = new List<Enquiryheader1>();
-         
             try
             {
-                
                     var getEnquiryDetailsTask = Task.Run(() => { lstEnqHeader = _EnquiryDetails.GetDetailsForAS400(); });
                     await Task.WhenAll(getEnquiryDetailsTask);
                     if (lstEnqHeader.Count > 0)
@@ -277,8 +269,6 @@ namespace FTC.Controllers
                         _log4net.Info("Error while getting data for AS400");
                         return Ok("Data Not avaialable");
                     }
-               
-
             }
             catch (Exception ex)
             {
@@ -597,6 +587,73 @@ namespace FTC.Controllers
                 return Ok(objMessageSNQ);
 
             }
+            catch (Exception ex)
+            {
+                _log4net.Error(ex);
+                return StatusCode(HttpContext.Response.StatusCode, ex.Message);
+            }
+        }
+
+        //Get Not Started Enquiry List
+        [HttpPost]
+        [Route("GetTaskListForShipName")]
+        public async Task<ActionResult> GetTaskListForShipName(shipSearchdata objserachdata)
+        {
+            List<Enquiryheaderdata> lstEnqHeader = new List<Enquiryheaderdata>();
+            try
+            {
+                if (User.Identity.IsAuthenticated)
+                {
+                    if (objserachdata.CustNameShipNameRefNo == null)
+                    {
+                        objserachdata.CustNameShipNameRefNo = "";
+                    }
+                    var getEnquiryTask = Task.Run(() => { lstEnqHeader = _EnquiryDetails.GetTaskListForShipName(objserachdata); });
+                    await Task.WhenAll(getEnquiryTask);
+                    if (lstEnqHeader != null)
+                    {
+                        return Ok(lstEnqHeader);
+                    }
+                    else
+                    {
+                        _log4net.Info("Enquiry Details not found");
+                        return Ok("Enquiry Details not found");
+                    }
+                }
+                else return Unauthorized();
+
+            }
+            catch (Exception ex)
+            {
+                _log4net.Error(ex);
+                return StatusCode(HttpContext.Response.StatusCode, ex.Message);
+            }
+        }
+
+        [HttpPost]
+        [Route("mergeData")]
+        public async Task<ActionResult> mergeData(List<Enquiryheaderdata> lstEnquiryheaderdata)
+        {
+            MessageSNQ obj = new MessageSNQ();
+            try
+            {
+                if (User.Identity.IsAuthenticated)
+                {
+                    var verifiedshipTask = Task.Run(() => { obj = _EnquiryDetails.UpdateRFQByShipName(lstEnquiryheaderdata); });
+                    await Task.WhenAll(verifiedshipTask);
+                    if (obj.result == "Error while updating ship name of Enquiry")
+                    {
+                        _log4net.Info("Error while updating ship name Enquiry");
+                        return Ok(obj);
+                    }
+                    else
+                    {
+                        return Ok(obj);
+                    }
+                }
+                else return Unauthorized();
+            }
+
             catch (Exception ex)
             {
                 _log4net.Error(ex);

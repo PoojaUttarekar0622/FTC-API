@@ -10,7 +10,7 @@ namespace Helper.Interface
         #region
         List<Enquiryheaderdata> GetEnquiryHeader(int status);
         Enquiryheaderdata GetEnquiryDetails(long fkenquiryid);
-        MessageMSD InsertEnquiry(Enquiryheader objEnquirydtls);
+        MessageWithRFQData InsertEnquiry(Enquiryheader objEnquirydtls);
         MessageMSD UpdateEnquiry(Enquiryheader objEnquirydtls);
         MessageMSD UpdateEnqStatus(EnquiryheaderdataForas400 objEnquirydtls);
         List<EnquiryheaderdataForas400> GetDetailsForAs400();
